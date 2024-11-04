@@ -4,6 +4,192 @@
   box-sizing: border-box;
 }
 
+/* ============================================= VARIABLES ============================================= */
+
+:root {
+  --color1: #1E072D;
+  --color2: #7C188D;
+  --color3: #BC47F3;
+  --color4: #0C0B18;
+  --color5: #D1D1D1;
+  --color6: #5C268F;
+}
+
+
+/* ============================================= TYPOGRAPHIES ============================================= */
+/* todo : Mettre la police en WOFF et WOFF2 */
+
+@font-face {
+  font-family: "mister-grape";
+  src: url(mister-grape.otf);
+}
+
+/* ============================================= GÉNÉRALE ============================================= */
+
+body {
+  background-color: var(--color1);
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h2 {
+  font-family: "mister-grape";
+  font-size: 5rem;
+  font-weight: 400;
+  margin-left: 11%;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+
+/* ============================================= SECTION TRANSITION ============================================= */
+
+#transition {
+  margin-right: auto;
+  margin-left: auto;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#transition p {
+  position: relative;
+  width: 45%;
+  color: #D1D1D1;
+}
+
+.p1 {
+  align-self: flex-end;
+  top: 60px;
+}
+
+.p2 {
+  align-self: flex-start;
+  top: 20px;
+}
+
+section {
+  margin-bottom: 300px;
+}
+
+.rect-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.rect {
+  position: relative;
+  width: 100px;
+  box-shadow: #0C0B18 5px 5px 10px;
+}
+
+.rect1 {
+  height: 100px;
+  border-radius: 150px 150px 70px 70px;
+  top: 50px;
+}
+
+.rect2,
+.rect3 {
+  height: 200px;
+  border-radius: 130px;
+}
+
+
+.rect3 {
+  top: 75px;
+}
+
+.rect4 {
+  width: 124px;
+  height: 124px;
+  border-radius: 180px;
+  top: 35px;
+}
+
+
+.bcolor-a {
+  background-color: var(--color6);
+}
+
+.bcolor-b {
+  background-color: var(--color2);
+}
+
+/* ============================================= SECTION DATAFR ============================================= */
+
+
+/* ============= GRID ============= */
+.grid {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 22fr 16fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+/* ============= DIV ============= */
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+.div2 {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: var(--color2);
+  color: var(--color5);
+
+}
+
+.div3 {
+  grid-area: 1 / 2 / 3 / 3;
+  /* flex-direction: column-reverse; */
+  background-color: var(--color2);
+  color: var(--color5);
+}
+
+div {
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#datafr div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div1 h3 {
+  align-self: flex-start;
+}
+
+
+
+
+/* ============================================= Responsive ============================================= */
+
+/* Casse à partir de 800px */
+
+
+/* ============================================= A11y ============================================= */
 
 .sr-only {
   border: 0 !important;
