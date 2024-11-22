@@ -92,6 +92,142 @@
 
         </section>
 
+        <!--  ======================== SECTION DONNÉES REVENUS EN FRANCE ====================  -->
+        <section class="revenusFrance">
+            <div>
+                <h2>Revenus en France</h2>
+                <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
+            </div>
+            
+
+            <div class="date" id="dateDisplay"></div>
+                <div class="slider-container">
+                        <div class="clicker">
+                            <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button> 
+                                            
+                        </div>
+                                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                                <pie-chart data="51;35;7;6;1"></pie-chart>
+                                <pie-chart data="31;52;15;1;1"></pie-chart>
+        
+                        <div class="clicker">
+                            <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg" alt=""></button>
+                        </div>
+                        
+
+                <div id="infoBulle" style="display:none;"></div>
+
+                    <div class="legend">
+                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                    </div>
+                
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="tableau">
+                    <table>
+                        <tr class="entete">
+                            <td>
+                                <p class="col1">Année</p>
+                            </td>
+                            <td>
+                                <p class="col2">Ventes <br>physiques</p>
+                            </td>
+                            <td>
+                                <p class="col3">Streaming/ <br> Abonnements</p>
+                            </td>
+                            <td>
+                                <p class="col4">Streaming /<br> publicité et vidéo</p>
+                            </td>
+                            <td>
+                                <p class="col4">Téléchargement</p>
+                            </td>
+                            <td>
+                                <p class="col4">Téléphone <br> mobile</p>
+                            </td>
+                            
+                        </tr>
+
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2012</p>
+                            </td>
+                            <td>
+                                <p class="col2">74</p>
+                            </td>
+                            <td>
+                                <p class="col3">7</p>
+                            </td>
+                            <td>
+                                <p class="col4">3</p>
+                            </td>
+                            <td>
+                                <p class="col4">13</p>
+                            </td>
+                            <td>
+                                <p class="col4">2</p>
+                            </td>
+                        </tr>
+
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2017</p>
+                            </td>
+                            <td>
+                                <p class="col2">51</p>
+                            </td>
+                            <td>
+                                <p class="col3">35</p>
+                            </td>
+                            <td>
+                                <p class="col4">7</p>
+                            </td>
+                            <td>
+                                <p class="col4">6</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                        </tr>
+
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2021</p>
+                            </td>
+                            <td>
+                                <p class="col2">31</p>
+                            </td>
+                            <td>
+                                <p class="col3">52</p>
+                            </td>
+                            <td>
+                                <p class="col4">15</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+    </section>
+
 
 
 
@@ -105,6 +241,7 @@
 
 
     <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 
 </html>
