@@ -13,9 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <!--  -->
-    <title>Nom du site</title>
+    <title>DataMusic</title>
 </head>
 
 <body>
@@ -27,7 +27,10 @@
             <div class="text-content">
                 <h1>DataMusic</h1>
                 <div class="text-accueil">
-                <p>Découvrez Toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de l’industrie musicale pour voir d’un autre œil votre passion.</p></div>
+                    <p>Découvrez Toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en
+                        France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de
+                        l’industrie musicale pour voir d’un autre œil votre passion.</p>
+                </div>
                 <a href="#voir-plus" class="btn-see-more">Voir plus</a>
             </div>
         </div>
@@ -38,17 +41,19 @@
         <h1>Chiffre d'affaires de l'industrie musicale</h1>
         <div class="chart-container">
             <svg id="chart" width="100%" height="500"></svg>
-        </div> 
+        </div>
         <div class="container">
-        <div class="diagram">
-            <div id="info-display" class="info-display"></div>
-    
+            <div class="diagram">
+                <div id="info-display" class="info-display"></div>
+
+            </div>
+            <div class="text-container">
+                <p>Si l’on regarde les données entre 1999 et 2022, on peut voir que le chiffre d’affaire dans le monde,
+                    de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus
+                    haut 26 milliards atteint récemment en 2022.</p>
+            </div>
         </div>
-        <div class="text-container">
-            <p>Si l’on regarde les données entre 1999 et 2022, on peut voir que le chiffre d’affaire dans le monde, de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus haut 26 milliards atteint récemment en 2022.</p>
-        </div>
-    </div>
-    <script src="diagramme.js"></script>
+        <script src="diagramme.js"></script>
 
 
 
@@ -69,14 +74,152 @@
                 tortor sed sem.</p>
         </section>
 
-        <section id="datafr">
 
-            <h2>Données Françaises</h2>
+
+        <!--  ======================== SECTION DONNÉES REVENUS EN FRANCE ====================  -->
+        <section class="revenusFrance">
+            <div>
+                <h2>Revenus en France</h2>
+                <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
+            </div>
+
+
+            <div class="date" id="dateDisplay"></div>
+            <div class="slider-container">
+                <div class="clicker">
+                    <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button>
+
+                </div>
+                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                <pie-chart data="51;35;7;6;1"></pie-chart>
+                <pie-chart data="31;52;15;1;1"></pie-chart>
+
+                <div class="clicker">
+                    <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg"
+                            alt=""></button>
+                </div>
+
+
+                <div id="infoBulle" style="display:none;"></div>
+
+                <div class="legend">
+                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="tableau">
+                <table>
+                    <tr class="entete">
+                        <td>
+                            <p class="col1">Année</p>
+                        </td>
+                        <td>
+                            <p class="col2">Ventes <br>physiques</p>
+                        </td>
+                        <td>
+                            <p class="col3">Streaming/ <br> Abonnements</p>
+                        </td>
+                        <td>
+                            <p class="col4">Streaming /<br> publicité et vidéo</p>
+                        </td>
+                        <td>
+                            <p class="col4">Téléchargement</p>
+                        </td>
+                        <td>
+                            <p class="col4">Téléphone <br> mobile</p>
+                        </td>
+
+                    </tr>
+
+                    <tr class="donnees">
+                        <td>
+                            <p class="col1">2012</p>
+                        </td>
+                        <td>
+                            <p class="col2">74</p>
+                        </td>
+                        <td>
+                            <p class="col3">7</p>
+                        </td>
+                        <td>
+                            <p class="col4">3</p>
+                        </td>
+                        <td>
+                            <p class="col4">13</p>
+                        </td>
+                        <td>
+                            <p class="col4">2</p>
+                        </td>
+                    </tr>
+
+                    <tr class="donnees">
+                        <td>
+                            <p class="col1">2017</p>
+                        </td>
+                        <td>
+                            <p class="col2">51</p>
+                        </td>
+                        <td>
+                            <p class="col3">35</p>
+                        </td>
+                        <td>
+                            <p class="col4">7</p>
+                        </td>
+                        <td>
+                            <p class="col4">6</p>
+                        </td>
+                        <td>
+                            <p class="col4">1</p>
+                        </td>
+                    </tr>
+
+                    <tr class="donnees">
+                        <td>
+                            <p class="col1">2021</p>
+                        </td>
+                        <td>
+                            <p class="col2">31</p>
+                        </td>
+                        <td>
+                            <p class="col3">52</p>
+                        </td>
+                        <td>
+                            <p class="col4">15</p>
+                        </td>
+                        <td>
+                            <p class="col4">1</p>
+                        </td>
+                        <td>
+                            <p class="col4">1</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+
+        <section id="albumfr">
+
+            <h2>Top album Français</h2>
             <div class="grid">
                 <div class="div1">
-                    <h3>La musique en France</h3>
-                    <p>Les Français écoutent de la musique environ 18 heures par semaine, ce qui en fait leur activité
-                        préférée pendant leur temps libre. La plupart utilisent leur téléphone pour ça.</p>
+                    <h3>Les albums les plus vendus en France</h3>
+                    <p>Un des marqueurs de réussite d'un album est sont nombres de ventes. On pense souvent au nombre de stream sur les plateformes comme Spotify, Deezer ou Apple musique mais tout cela est considéré comme des ventes</p>
                 </div>
 
                 <div class="div2">
@@ -86,149 +229,11 @@
 
                 <div class="div3">
                     <canvas id="canvas"></canvas>
-                    <h3>Titre du graphique</h3>
+                    <h3>Titre</h3>
                 </div>
             </div>
 
         </section>
-
-        <!--  ======================== SECTION DONNÉES REVENUS EN FRANCE ====================  -->
-        <section class="revenusFrance">
-            <div>
-                <h2>Revenus en France</h2>
-                <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
-            </div>
-            
-
-            <div class="date" id="dateDisplay"></div>
-                <div class="slider-container">
-                        <div class="clicker">
-                            <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button> 
-                                            
-                        </div>
-                                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
-                                <pie-chart data="51;35;7;6;1"></pie-chart>
-                                <pie-chart data="31;52;15;1;1"></pie-chart>
-        
-                        <div class="clicker">
-                            <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg" alt=""></button>
-                        </div>
-                        
-
-                <div id="infoBulle" style="display:none;"></div>
-
-                    <div class="legend">
-                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
-                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
-                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
-                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
-                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
-                    </div>
-                
-                </div>
-
-                <br>
-                <br>
-                <br>
-                <br>
-
-                <div class="tableau">
-                    <table>
-                        <tr class="entete">
-                            <td>
-                                <p class="col1">Année</p>
-                            </td>
-                            <td>
-                                <p class="col2">Ventes <br>physiques</p>
-                            </td>
-                            <td>
-                                <p class="col3">Streaming/ <br> Abonnements</p>
-                            </td>
-                            <td>
-                                <p class="col4">Streaming /<br> publicité et vidéo</p>
-                            </td>
-                            <td>
-                                <p class="col4">Téléchargement</p>
-                            </td>
-                            <td>
-                                <p class="col4">Téléphone <br> mobile</p>
-                            </td>
-                            
-                        </tr>
-
-                        <tr class="donnees">
-                            <td>
-                                <p class="col1">2012</p>
-                            </td>
-                            <td>
-                                <p class="col2">74</p>
-                            </td>
-                            <td>
-                                <p class="col3">7</p>
-                            </td>
-                            <td>
-                                <p class="col4">3</p>
-                            </td>
-                            <td>
-                                <p class="col4">13</p>
-                            </td>
-                            <td>
-                                <p class="col4">2</p>
-                            </td>
-                        </tr>
-
-                        <tr class="donnees">
-                            <td>
-                                <p class="col1">2017</p>
-                            </td>
-                            <td>
-                                <p class="col2">51</p>
-                            </td>
-                            <td>
-                                <p class="col3">35</p>
-                            </td>
-                            <td>
-                                <p class="col4">7</p>
-                            </td>
-                            <td>
-                                <p class="col4">6</p>
-                            </td>
-                            <td>
-                                <p class="col4">1</p>
-                            </td>
-                        </tr>
-
-                        <tr class="donnees">
-                            <td>
-                                <p class="col1">2021</p>
-                            </td>
-                            <td>
-                                <p class="col2">31</p>
-                            </td>
-                            <td>
-                                <p class="col3">52</p>
-                            </td>
-                            <td>
-                                <p class="col4">15</p>
-                            </td>
-                            <td>
-                                <p class="col4">1</p>
-                            </td>
-                            <td>
-                                <p class="col4">1</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-    </section>
-
-
 
 
 
