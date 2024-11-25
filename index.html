@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Typographie -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +33,7 @@
                         France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de
                         l’industrie musicale pour voir d’un autre œil votre passion.</p>
                 </div>
+                <!-- TODO : Mettre un lien valable et changer le call to action -->
                 <a href="#voir-plus" class="btn-see-more">Voir plus</a>
             </div>
         </div>
@@ -38,7 +41,74 @@
 
     <!-- Main -->
     <main>
-        <h1>Chiffre d'affaires de l'industrie musicale</h1>
+
+        <!-- ---------------------------------  Histoire Musique  ------------------------------------------------------- -->
+        <div class="grid-background"></div>
+        <div class="container">
+            <!-- TODO : Revoir le nom de class et le style pour éviter les br -->
+            <h2 class="titleeee">Évolution <br> des supports <br>musicaux</h2>
+            <div class="description">
+                <p>Entre 1950 environ à aujourd'hui, la musique a évolué sous différents supports ayant chacun leurs
+                    avantages. On notera deux formes différentes : les supports physiques et les supports numériques.
+                </p>
+                <p>Les premiers à être créés furent les vinyles, entre 1950 et 1970, appréciés pour leur qualité sonore
+                    et
+                    leur format physique parfois personnalisé en fonction de l’album. Par la suite, les cassettes sont
+                    nées,
+                    entre 1970 et 1990, à la fois portables et enregistrables. Puis les CD sont apparus entre 1980 et
+                    2000,
+                    offrant une qualité sonore supérieure et durable dans le temps.</p>
+                <p>Vers les années 2000, le MP3 et les téléchargements numériques ont marqué le début de la
+                    dématérialisation. Aujourd'hui, le streaming est le support le plus utilisé, offrant un accès
+                    instantané
+                    à une multitude de musique grâce à un fonctionnement d'abonnements.</p>
+            </div>
+        </div>
+
+        <!-- ------------------------------  Frise chronologique en pleine largeur  ----------------------------------------- -->
+        <!-- TODO : Possible de le faire avec du JS et JSON : plus opti peut-être -->
+        <div class="timeline">
+            <div class="timeline-item year-1963">
+                <p class="year">1963</p>
+                <div class="year-square"></div>
+                <p class="description">Cassette</p>
+            </div>
+            <div class="timeline-item year-1970">
+                <p class="year">1970</p>
+                <div class="year-square"></div>
+                <p class="description">Vinyles</p>
+            </div>
+            <div class="timeline-item year-1979">
+                <p class="year">1979</p>
+                <div class="year-square"></div>
+                <p class="description">Baladeur cassette</p>
+            </div>
+            <div class="timeline-item year-1983">
+                <p class="year">1983</p>
+                <div class="year-square"></div>
+                <p class="description">CD</p>
+            </div>
+            <div class="timeline-item year-1984">
+                <p class="year">1984</p>
+                <div class="year-square"></div>
+                <p class="description">Baladeur CD</p>
+            </div>
+            <div class="timeline-item year-1998">
+                <p class="year">1998</p>
+                <div class="year-square"></div>
+                <p class="description">Baladeur MP3</p>
+            </div>
+            <div class="timeline-item year-2001">
+                <p class="year">2001</p>
+                <div class="year-square"></div>
+                <p class="description">Ipod</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- ------------------------------------  Graphique Industrie Musical Monde  ------------------------------------------ -->
+         <!-- TODO : Remarque : C'est pas du tout accessible ( question couleur)  -->
+        <h2>Chiffre d'affaires de l'industrie musicale</h1>
         <div class="chart-container">
             <svg id="chart" width="100%" height="500"></svg>
         </div>
@@ -49,34 +119,39 @@
             </div>
             <div class="text-container">
                 <p>Si l’on regarde les données entre 1999 et 2022, on peut voir que le chiffre d’affaire dans le monde,
-                    de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus
-                    haut 26 milliards atteint récemment en 2022.</p>
+                    de
+                    la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus
+                    haut 26
+                    milliards atteint récemment en 2022.</p>
             </div>
         </div>
-        <script src="diagramme.js"></script>
 
 
+        <!-- ---------------------------------  Best Selling Album Monde  ------------------------------------------------------- -->
 
+        <!-- TODO : Finir la section -->
+        <section id="BestSellingAlbum">
+            <h2>L'Album le plus vendu chaque année</h2>
 
+        </section>
 
-        <section id="transition">
-            <p class="p1">Lorem ipsum dolor sit amet consectetur. Et gravida elit mauris amet iaculis. Malesua vel
-                feugiat
-                tortor sed sem.</p>
-            <div class="rect-container">
-                <div class="rect rect1 bcolor-a"></div>
-                <div class="rect rect2 bcolor-b"></div>
-                <div class="rect rect3 bcolor-a"></div>
-                <div class="rect rect4 bcolor-b"></div>
-            </div>
-            <p class="p2">Lorem ipsum dolor sit amet consectetur. Et gravida elit mauris amet iaculis. Malesua vel
-                feugiat
-                tortor sed sem.</p>
+        <!-- -------------  Top Album Monde  ----------- -->
+
+        <!-- TODO : Style -->
+        <section id="topAlbumMonde">
+            <h2>Top album Monde</h2>
+            <div class="album"></div>
+            <span>
+                <button class="prevYear">⬅️</button>
+                <p class="year"></p>
+                <button class="nextYear">➡️</button>
+            </span>
         </section>
 
 
 
-        <!--  ======================== SECTION DONNÉES REVENUS EN FRANCE ====================  -->
+        <!--  ------------------------------- SECTION DONNÉES REVENUS EN FRANCE -----------------------------------------------  -->
+        <!-- TODO : Peut-être mettre plus d'infos dans les hovers ? et mettre les pourcentages aussi à un autre endroit ?  -->
         <section class="revenusFrance">
             <div>
                 <h2>Revenus en France</h2>
@@ -112,11 +187,7 @@
 
             </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-
+            <!-- TODO : Style : margin/padding top bottom -->
             <div class="tableau">
                 <table>
                     <tr class="entete">
@@ -205,34 +276,21 @@
                     </tr>
                 </table>
             </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </section>
 
-        <section id="albumfr">
 
-            <h2>Top album Français</h2>
-            <div class="grid">
-                <div class="div1">
-                    <h3>Les albums les plus vendus en France</h3>
-                    <p>Un des marqueurs de réussite d'un album est sont nombres de ventes. On pense souvent au nombre de stream sur les plateformes comme Spotify, Deezer ou Apple musique mais tout cela est considéré comme des ventes</p>
-                </div>
+        <!-- ----------  Top 3 Album France  ------------------- -->
 
-                <div class="div2">
-                    <p> En 2021, on compte 22 millions d’utilisateurs de streaming (payant et gratuit), un nombre
-                        en hausse de 10 % par rapport à 2020.</p>
-                </div>
-
-                <div class="div3">
-                    <canvas id="canvas"></canvas>
-                    <h3>Titre</h3>
-                </div>
-            </div>
-
+        <!-- TODO : Style -->
+        <section id="topAlbumFr">
+            <h2>Top album en France</h2>
+            <p>Pour les années 2012, 2017 et 2021</p>
+            <div class="podium"></div>
+            <span>
+                <button class="prevYear">⬅️</button>
+                <p class="year">2012</p>
+                <button class="nextYear">➡️</button>
+            </span>
         </section>
 
 
@@ -240,13 +298,21 @@
     </main>
 
     <!-- Footer -->
+    <!-- TODO : Mentions légales -->
     <footer>
 
     </footer>
 
 
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
+
+
+
+    <script src="script/diagramme.js"></script>
+    <script src="script/script2.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/podium.js"></script>
+    <script src="script/topAlbumMonde.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-
 // Données des ventes de musique par année avec des sources de revenu spécifiques
 const data = [
     {"year": 1999, "total": 24.1, "ventes_physiques": 24.1, "droits_execution": 0, "ventes_digitales": 0, "streaming": 0, "synchronisation": 0},
@@ -32,7 +31,7 @@ const width = 800;
 const height = 500;
 const margin = { top: 20, right: 30, bottom: 50, left: 40 };
 
-// Créer un élément SVG avec les dimensions et marges définies
+// Création de l'élément SVG
 const svg = d3.select("#chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -49,17 +48,17 @@ const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.total)])
     .nice()
     .range([height, 0]);
-     
-// Définition des couleurs pour chaque source de revenu (tons de violet)
+
+// Définition des couleurs pour chaque source de revenu
 const colors = {
-    ventes_physiques: "#7a4ba1",    // Violet foncé
-    droits_execution: "#9b6fb1",   // Violet moyen
-    ventes_digitales: "#b890d1",   // Violet plus clair
-    streaming: "#d1a9e1",          // Violet pastel
-    synchronisation: "#e5c1f0"     // Violet très clair
+    ventes_physiques: "#7a4ba1",
+    droits_execution: "#9b6fb1",
+    ventes_digitales: "#b890d1",
+    streaming: "#d1a9e1",
+    synchronisation: "#e5c1f0"
 };
 
-// Ajouter les axes
+// Ajout des axes
 svg.append("g")
     .attr("class", "x-axis")
     .attr("transform", `translate(0,${height})`)
@@ -69,51 +68,10 @@ svg.append("g")
     .attr("class", "y-axis")
     .call(d3.axisLeft(y));
 
-// Conteneur d'information
+// Conteneur d'information pour afficher les détails au survol
 const infoDisplay = document.getElementById("info-display");
 
-// Diagramme empilé par année
-data.forEach(d => {
-    let yOffset = height; // Initialiser l'offset vertical pour chaque année
-
-    // Accumuler la hauteur pour chaque segment afin de s'assurer que chaque bar atteint le total de l'année
-    ["ventes_physiques", "droits_execution", "ventes_digitales", "streaming", "synchronisation"].forEach(source => {
-        const segmentValue = d[source];
-        const segmentHeight = y(0) - y(segmentValue); // Calculer la hauteur du segment
-
-        // Créer chaque segment empilé
-        svg.append("rect")
-            .attr("x", x(d.year))
-            .attr("y", yOffset - segmentHeight)
-            .attr("width", x.bandwidth())
-            .attr("height", segmentHeight)
-            .attr("fill", colors[source])
-            .on("mouseover", function() {
-                infoDisplay.style.display = "block";
-                infoDisplay.innerHTML = `
-                    <h3>Année ${d.year}</h3>
-                    <p>Total : ${d.total} milliards</p>
-                    <p>Ventes physiques : ${d.ventes_physiques} milliards</p>
-                    <p>Droits d'exécution : ${d.droits_execution} milliards</p>
-                    <p>Ventes digitales : ${d.ventes_digitales} milliards</p>
-                    <p>Streaming : ${d.streaming} milliards</p>
-                    <p>Synchronisation : ${d.synchronisation} milliards</p>
-                `;
-            })
-            .on("mousemove", function(event) {
-                infoDisplay.style.left = (event.pageX + 10) + "px";
-                infoDisplay.style.top = (event.pageY + 10) + "px";
-            })
-            .on("mouseout", function() {
-                infoDisplay.style.display = "none";
-            });
-
-        yOffset -= segmentHeight;
-
-
-const infoDisplay = document.getElementById("info-display");
-
-// Affichage de l'information lors du survol
+// Fonction pour afficher les segments empilés de chaque année
 data.forEach(d => {
     let yOffset = height;
 
@@ -149,6 +107,65 @@ data.forEach(d => {
 
         yOffset -= segmentHeight;
     });
+});
+
+// Script pour positionner les éléments de la frise chronologique
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    const startYear = 1960;
+    const endYear = 2020;
+
+    timelineItems.forEach(item => {
+        const year = parseInt(item.getAttribute("data-year"));
+        const positionPercent = ((year - startYear) / (endYear - startYear)) * 100;
+        item.style.left = `${positionPercent}%`;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const timeline = document.querySelector(".timeline");
+            const timelineItems = document.querySelectorAll(".timeline-item");
+            const startYear = 1963;
+            const endYear = 2001;
+            const yearsRange = endYear - startYear;
+            
+            // Largeur totale de la frise
+            const timelineWidth = timeline.offsetWidth;
+        
+            // Calcul des pixels par année
+            const pixelsPerYear = timelineWidth / yearsRange;
+        
+            timelineItems.forEach((item) => {
+                // Extraire l'année de chaque élément (par exemple depuis un attribut data-year)
+                const year = parseInt(item.querySelector(".year").textContent);
+                
+                // Calculer la position en pixels
+                const position = (year - startYear) * pixelsPerYear;
+                
+                // Appliquer la position calculée
+                item.style.position = "absolute";
+                item.style.left = `${position}px`;
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1, // 10% visible pour déclencher
+    };
+
+    const handleIntersect = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // Stop observer après apparition
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    // Cible les éléments à observer
+    const targets = document.querySelectorAll('.chart-container, .text-container');
+    targets.forEach(target => observer.observe(target));
 });
 
     });
