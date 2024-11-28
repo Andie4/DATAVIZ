@@ -14,7 +14,8 @@ fetch('data/franceAlbum.json').then(function (response) {
         function affichePodium(year) {
             var albumAnnee = dataPod[year]
             document.querySelector("#topAlbumFr .year").innerHTML = year
-            albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML = '<div id="'
+            document.querySelector("#topAlbumFr .podium").innerHTML = ""
+            albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += '<div id="'
                 + album.top
                 + '">'
                 + '<img src="'

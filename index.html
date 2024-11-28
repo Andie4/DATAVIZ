@@ -24,19 +24,16 @@
 
     <!-- Header -->
     <header>
-        <div class="homepage-container">
-            <img src="img/disque.svg" alt="Disque vinyle" class="background-disc">
-            <div class="text-content">
-                <h1>DataMusic</h1>
-                <div class="text-accueil">
-                    <p>Découvrez Toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en
-                        France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de
-                        l’industrie musicale pour voir d’un autre œil votre passion.</p>
-                </div>
-                <!-- TODO : Mettre un lien valable et changer le call to action -->
-                <a href="#voir-plus" class="btn-see-more">Voir plus</a>
-            </div>
+        <img src="img/disque.svg" alt="" class="background-disc">
+        <div class="text-content">
+            <h1>DataMusic</h1>
+            <p>Découvrez toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en
+                France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de
+                l’industrie musicale pour voir d’un autre œil votre passion.</p>
+            <!-- TODO : Mettre un lien valable et changer le call to action -->
+            <a href="#histoire" class="btn-see-more">Découvrir son histoire</a>
         </div>
+
     </header>
 
     <!-- Main -->
@@ -44,9 +41,9 @@
 
         <!-- ---------------------------------  Histoire Musique  ------------------------------------------------------- -->
         <div class="grid-background"></div>
-        <div class="container">
+        <div id="histoire" class="container">
             <!-- TODO : Revoir le nom de class et le style pour éviter les br -->
-            <h2 class="titleeee">Évolution <br> des supports <br>musicaux</h2>
+            <h2>Évolution des supports musicaux</h2>
             <div class="description">
                 <p>Entre 1950 environ à aujourd'hui, la musique a évolué sous différents supports ayant chacun leurs
                     avantages. On notera deux formes différentes : les supports physiques et les supports numériques.
@@ -107,191 +104,188 @@
         </div>
 
         <!-- ------------------------------------  Graphique Industrie Musical Monde  ------------------------------------------ -->
-         <!-- TODO : Remarque : C'est pas du tout accessible ( question couleur)  -->
+        <!-- TODO : Remarque : C'est pas du tout accessible ( question couleur)  -->
         <h2>Chiffre d'affaires de l'industrie musicale</h1>
-        <div class="chart-container">
-            <svg id="chart" width="100%" height="500"></svg>
-        </div>
-        <div class="container">
-            <div class="diagram">
-                <div id="info-display" class="info-display"></div>
-
+            <div class="chart-container">
+                <svg id="chart" width="100%" height="500"></svg>
             </div>
-            <div class="text-container">
-                <p>Si l’on regarde les données entre 1999 et 2022, on peut voir que le chiffre d’affaire dans le monde,
-                    de
-                    la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus
-                    haut 26
-                    milliards atteint récemment en 2022.</p>
-            </div>
-        </div>
-
-
-        <!-- ---------------------------------  Best Selling Album Monde  ------------------------------------------------------- -->
-
-        <!-- TODO : Finir la section -->
-        <section id="BestSellingAlbum">
-            <h2>L'Album le plus vendu chaque année</h2>
-
-        </section>
-
-        <!-- -------------  Top Album Monde  ----------- -->
-
-        <!-- TODO : Style -->
-        <section id="topAlbumMonde">
-            <h2>Top album Monde</h2>
-            <div class="album"></div>
-            <span>
-                <button class="prevYear">⬅️</button>
-                <p class="year"></p>
-                <button class="nextYear">➡️</button>
-            </span>
-        </section>
-
-
-
-        <!--  ------------------------------- SECTION DONNÉES REVENUS EN FRANCE -----------------------------------------------  -->
-        <!-- TODO : Peut-être mettre plus d'infos dans les hovers ? et mettre les pourcentages aussi à un autre endroit ?  -->
-        <section class="revenusFrance">
-            <div>
-                <h2>Revenus en France</h2>
-                <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
-            </div>
-
-
-            <div class="date" id="dateDisplay"></div>
-            <div class="slider-container">
-                <div class="clicker">
-                    <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button>
+            <div class="container">
+                <div class="diagram">
+                    <div id="info-display" class="info-display"></div>
 
                 </div>
-                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
-                <pie-chart data="51;35;7;6;1"></pie-chart>
-                <pie-chart data="31;52;15;1;1"></pie-chart>
+                <div class="text-container">
+                    <p>Si l’on regarde les données entre 1999 et 2022, on peut voir que le chiffre d’affaire dans le
+                        monde, de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus haut 26 milliards atteint récemment en 2022.</p>
+                </div>
+            </div>
 
-                <div class="clicker">
-                    <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg"
-                            alt=""></button>
+
+            <!-- ---------------------------------  Best Selling Album Monde  ------------------------------------------------------- -->
+
+            <!-- TODO : Finir la section -->
+            <section id="BestSellingAlbum">
+                <h2>L'Album le plus vendu chaque année</h2>
+
+            </section>
+
+            <!-- -------------  Top Album Monde  ----------- -->
+
+            <!-- TODO : Style -->
+            <section id="topAlbumMonde">
+                <h2>Top album Monde</h2>
+                <div class="album"></div>
+                <span>
+                    <button class="prevYear">⬅️</button>
+                    <p class="year"></p>
+                    <button class="nextYear">➡️</button>
+                </span>
+            </section>
+
+
+
+            <!--  ------------------------------- SECTION DONNÉES REVENUS EN FRANCE -----------------------------------------------  -->
+            <!-- TODO : Peut-être mettre plus d'infos dans les hovers ? et mettre les pourcentages aussi à un autre endroit ?  -->
+            <section class="revenusFrance">
+                <div>
+                    <h2>Revenus en France</h2>
+                    <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
                 </div>
 
 
-                <div id="infoBulle" style="display:none;"></div>
+                <div class="date" id="dateDisplay"></div>
+                <div class="slider-container">
+                    <div class="clicker">
+                        <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button>
 
-                <div class="legend">
-                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
-                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
-                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
-                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
-                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                    </div>
+                    <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                    <pie-chart data="51;35;7;6;1"></pie-chart>
+                    <pie-chart data="31;52;15;1;1"></pie-chart>
+
+                    <div class="clicker">
+                        <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg"
+                                alt=""></button>
+                    </div>
+
+
+                    <div id="infoBulle" style="display:none;"></div>
+
+                    <div class="legend">
+                        <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                        <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                        <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                        <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                        <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                    </div>
+
                 </div>
 
-            </div>
+                <!-- TODO : Style : margin/padding top bottom -->
+                <div class="tableau">
+                    <table>
+                        <tr class="entete">
+                            <td>
+                                <p class="col1">Année</p>
+                            </td>
+                            <td>
+                                <p class="col2">Ventes <br>physiques</p>
+                            </td>
+                            <td>
+                                <p class="col3">Streaming/ <br> Abonnements</p>
+                            </td>
+                            <td>
+                                <p class="col4">Streaming /<br> publicité et vidéo</p>
+                            </td>
+                            <td>
+                                <p class="col4">Téléchargement</p>
+                            </td>
+                            <td>
+                                <p class="col4">Téléphone <br> mobile</p>
+                            </td>
 
-            <!-- TODO : Style : margin/padding top bottom -->
-            <div class="tableau">
-                <table>
-                    <tr class="entete">
-                        <td>
-                            <p class="col1">Année</p>
-                        </td>
-                        <td>
-                            <p class="col2">Ventes <br>physiques</p>
-                        </td>
-                        <td>
-                            <p class="col3">Streaming/ <br> Abonnements</p>
-                        </td>
-                        <td>
-                            <p class="col4">Streaming /<br> publicité et vidéo</p>
-                        </td>
-                        <td>
-                            <p class="col4">Téléchargement</p>
-                        </td>
-                        <td>
-                            <p class="col4">Téléphone <br> mobile</p>
-                        </td>
+                        </tr>
 
-                    </tr>
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2012</p>
+                            </td>
+                            <td>
+                                <p class="col2">74</p>
+                            </td>
+                            <td>
+                                <p class="col3">7</p>
+                            </td>
+                            <td>
+                                <p class="col4">3</p>
+                            </td>
+                            <td>
+                                <p class="col4">13</p>
+                            </td>
+                            <td>
+                                <p class="col4">2</p>
+                            </td>
+                        </tr>
 
-                    <tr class="donnees">
-                        <td>
-                            <p class="col1">2012</p>
-                        </td>
-                        <td>
-                            <p class="col2">74</p>
-                        </td>
-                        <td>
-                            <p class="col3">7</p>
-                        </td>
-                        <td>
-                            <p class="col4">3</p>
-                        </td>
-                        <td>
-                            <p class="col4">13</p>
-                        </td>
-                        <td>
-                            <p class="col4">2</p>
-                        </td>
-                    </tr>
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2017</p>
+                            </td>
+                            <td>
+                                <p class="col2">51</p>
+                            </td>
+                            <td>
+                                <p class="col3">35</p>
+                            </td>
+                            <td>
+                                <p class="col4">7</p>
+                            </td>
+                            <td>
+                                <p class="col4">6</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                        </tr>
 
-                    <tr class="donnees">
-                        <td>
-                            <p class="col1">2017</p>
-                        </td>
-                        <td>
-                            <p class="col2">51</p>
-                        </td>
-                        <td>
-                            <p class="col3">35</p>
-                        </td>
-                        <td>
-                            <p class="col4">7</p>
-                        </td>
-                        <td>
-                            <p class="col4">6</p>
-                        </td>
-                        <td>
-                            <p class="col4">1</p>
-                        </td>
-                    </tr>
-
-                    <tr class="donnees">
-                        <td>
-                            <p class="col1">2021</p>
-                        </td>
-                        <td>
-                            <p class="col2">31</p>
-                        </td>
-                        <td>
-                            <p class="col3">52</p>
-                        </td>
-                        <td>
-                            <p class="col4">15</p>
-                        </td>
-                        <td>
-                            <p class="col4">1</p>
-                        </td>
-                        <td>
-                            <p class="col4">1</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+                        <tr class="donnees">
+                            <td>
+                                <p class="col1">2021</p>
+                            </td>
+                            <td>
+                                <p class="col2">31</p>
+                            </td>
+                            <td>
+                                <p class="col3">52</p>
+                            </td>
+                            <td>
+                                <p class="col4">15</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                            <td>
+                                <p class="col4">1</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
 
 
-        <!-- ----------  Top 3 Album France  ------------------- -->
+            <!-- ----------  Top 3 Album France  ------------------- -->
 
-        <!-- TODO : Style -->
-        <section id="topAlbumFr">
-            <h2>Top album en France</h2>
-            <p>Pour les années 2012, 2017 et 2021</p>
-            <div class="podium"></div>
-            <span>
-                <button class="prevYear">⬅️</button>
-                <p class="year">2012</p>
-                <button class="nextYear">➡️</button>
-            </span>
-        </section>
+            <!-- TODO : Style -->
+            <section id="topAlbumFr">
+                <h2>Top album en France</h2>
+                <p>Pour les années 2012, 2017 et 2021</p>
+                <div class="podium"></div>
+                <span>
+                    <button class="prevYear">⬅️</button>
+                    <p class="year">2012</p>
+                    <button class="nextYear">➡️</button>
+                </span>
+            </section>
 
 
 
@@ -300,7 +294,7 @@
     <!-- Footer -->
     <!-- TODO : Mentions légales -->
     <footer>
-
+        <a href="mentions.html">Mentions légales</a>
     </footer>
 
 

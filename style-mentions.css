@@ -1,0 +1,70 @@
+:root {
+  --color1: #1E072D;
+  --color2: #7C188D;
+  --color3: #BC47F3;
+  --color4: #0C0B18;
+  --color5: #D1D1D1;
+  --color6: #5C268F;
+}
+
+/* Style main */
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+main p {
+  font-family: "Itim", cursive;
+  font-size: 1.15rem;
+}
+
+main a {
+  font-family: "Itim", cursive, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Mentions légales */
+main {
+  display: flex;
+  gap: 5%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+main nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: var(--color1);
+  height: 300px;
+
+}
+
+main nav h2 {
+  text-align: center;
+}
+
+main nav a {
+  margin-left: 30px;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  max-width: 750px;
+  gap: 20px;
+}
