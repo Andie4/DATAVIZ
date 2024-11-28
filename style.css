@@ -7,12 +7,15 @@
 /* ============================================= VARIABLES ============================================= */
 
 :root {
-  --color1: #1E072D;
-  --color2: #7C188D;
-  --color3: #BC47F3;
-  --color4: #0C0B18;
-  --color5: #D1D1D1;
-  --color6: #5C268F;
+  --color1: #000000;
+  --color2: #A854B1;
+  --color3: #A575D2;
+  --color4: #7C188D;
+  --color5: #5F2992;
+  --color6: #D9D9D9;
+  --color7: white;
+  --color8: #;
+  --color9: #;
 }
 
 
@@ -31,6 +34,28 @@ body {
   background-color: #1E072D;
   margin: 0;
   color: rgb(255, 255, 255);
+}
+
+/* ============================================= FOOTER ============================================= */
+
+footer{
+  background-color: var(--color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  height: 50px;
+}
+
+footer a{
+  color: var(--color1);
+  text-decoration: none;
+  transition: 1s ease-in-out;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  transition: 1s ease-in-out;
 }
 
 /* ============================================= HEADER ============================================= */
