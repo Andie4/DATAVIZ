@@ -99,18 +99,12 @@ header div{
   z-index: 2;
   width: 60vw;
   max-width: 750px;
-  top: 30vh;
+  top: 20vh;
   left: 37%;
   position: relative;
 }
 
-h1 {
-  font-size: 7rem;
-  font-family: 'mister-grape', cursive;
-  font-weight: 200;
-  color: #f4f4f4;
-  margin: 0;
-}
+
 
 
 
@@ -170,41 +164,112 @@ header div p {
 }
 
 /* ------------ Frise Chrono ----------------- */
-
-.chart-container {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px 0 0 0;
-  padding: 10px;
-  margin-right: 40%;
-}
-
-
-.bar {
-  fill: #814caf;
-  transition: fill 0.3s;
-}
-
-.bar:hover {
-  fill: #ad45dd;
-}
-
-.axis text {
-  font-size: 12px;
-  fill: #333;
-}
-
-.diagram-container {
+/* Container de la frise */
+.timeline-container {
+  margin-bottom: 30vh;
+  margin-top: 10vh;
   display: flex;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 800px;
-  margin: 20px 0;
+  flex-direction: row;
+  justify-content: space-around; /* Espaces égaux entre les items */
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-top: 2px solid #814caf; /* Ligne centrale */
+  box-sizing: border-box;
+
 }
 
-.chart-container {
-  flex: 1;
-  padding: 10px;
+/* Éléments de la timeline */
+.timeline-item {
+  text-align: center;
+  position: relative;
+  flex: 1; /* Permet une répartition équitable */
+}
+
+.year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #814caf;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  background-color: #814caf;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.description {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #814caf;
+  z-index: 1;
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column; /* Passe en colonne */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    border-top: none; /* Supprime la ligne centrale horizontale */
+    position: static; /* Remet la disposition par défaut pour éviter des conflits */
+  }
+
+  .timeline-item {
+    flex: unset; /* Permet une largeur automatique */
+    margin-bottom: 20px; /* Ajoute un espacement entre les items */
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #814caf;
+    z-index: -1;
+  }
+
+  .marker {
+    margin: 10px 0; /* Ajuste le placement des marqueurs */
+  }
+
+  .year,
+  .description {
+    text-align: center; /* Centrer le texte pour un affichage vertical */
+  }
+}
+
+/* Ajustements pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .year {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .marker {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 
@@ -261,6 +326,8 @@ header div p {
   font-size: 0.9rem;
   text-align: left;
   border-radius: 15px;
+  position: relative;
+  bottom: 300px;
 
 }
 
@@ -513,7 +580,7 @@ h3 {
 /* css du tableau pour les revenus dans le monde */
 
 .accordion {
-  background-color: #290446;
+  background-color: #b076dd;
   color: white;
   cursor: pointer;
   padding: 10px 20px;
@@ -522,14 +589,16 @@ h3 {
   font-size: 16px;
   border-radius: 5px;
   transition: background-color 0.3s;
-  box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+  box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
   margin-bottom: 10px;
   display: inline-block;
-  
+  position: relative;
+  left: 1150px;
+  bottom: 30vh;
 }
 
 .accordion:hover {
-  background-color: #290446;
+  background-color: #642892;
 }
 
 .panel {
@@ -582,7 +651,9 @@ tr:nth-child(even) td {
 
 h1 {
   color: #fffcfc;
+  font-family: "mister-grape";
   text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 7rem;
+  font-weight: 400;
 }
