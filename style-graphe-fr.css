@@ -1,76 +1,124 @@
-/* ============================================= SECTION DONNÉES REVENUS EN FRANCE ============================================= */
-
-/* ------ titre ------- */
-.revenusFrance h2 {
-    font-size: 5rem;
-    font-family: 'mister-grape';
-    font-weight: lighter;
-    color: var(--color7);
-    margin-top: 0.5vh;
-    margin-bottom: 2vh;
+@font-face{
+  font-family: 'Mister Grape';
+  src: url('./mister_grape/Mister Grape - Personal Use.otf') ;
+  
+  }
+  
+  *,
+          *::after,
+          *::before {
+              box-sizing: border-box;
+          }
+  
+  body {
+      margin: 0;
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+      display: grid;
+      align-items: center;
+      background-color: #1E072D;
+      font-family: 'Inter';
+      padding-left: 10vh;
+      padding-right: 10vh;
+  }
+  
+  :root {
+      --color1: #000000;
+      --color2: #A854B1;
+      --color3: #A575D2;
+      --color4: #7C188D;
+      --color5: #5F2992;
+      --color6: #D9D9D9;
+      --color7: white;
+      --color8: #;
+      --color9: #;
   }
   
   
-  .revenusFrance .description {
-    color: #fff;
+  
+  
+  
+  /* ------ titre ------- */
+  .revenusFrance h2{
+      font-size: 5rem;
+      font-family: 'Mister Grape';
+      font-weight: lighter;
+      color: var(--color7);
+      margin-top: 0.5vh;
+      margin-bottom: 2vh;
   }
   
   
-  .revenusFrance .date {
-    padding-right: 38vh;
+  .revenusFrance .description{
+      color: #fff;
+  }
+  
+  
+  .revenusFrance .date{
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 20px;
+      font-weight: bold;
+      background-color: var(--color3);
+      padding: 2.5vh;
+      border-radius: 3vh;
+      width: fit-content;
+      margin-left: 55vh;
   }
   
   
   
   
   /* ----- camembert ----- */
-  .revenusFrance .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  .revenusFrance  .slider-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 6vh;
   }
   
-  .revenusFrance .cliker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .revenusFrance .cliker{
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   
-  .revenusFrance svg {
-    width: 100px;
-    height: 100px;
-  
+  .revenusFrance svg{
+      width: 100px;
+      height: 100px;
+      
   }
   
   .revenusFrance pie-chart.active {
-    display: block;
-    opacity: 1;
+      display: block;
+      opacity: 1;
   }
   
-  .revenusFrance pie-chart {
-    width: 600px;
-    height: 600px;
-    position: relative;
-    position: relative;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-  
+  .revenusFrance pie-chart{
+      width: 600px;
+      height: 600px;
+      position: relative;
+      position: relative;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      
   }
   
   
   /* ----- flèches -----  */
-  .revenusFrance button {
-    width: 8vh;
-    background-color: #1E072D;
-    border-radius: 20vh;
-    border: #b16cdf;
-    margin: 30px;
+  .revenusFrance button{
+      width: 8vh;
+      background-color: #1E072D;
+      border-radius: 20vh;
+      border: #b16cdf;
+      margin: 30px;
   
   }
   
-  .revenusFrance img {
-    width: 50px;
+  .revenusFrance img{
+      width: 50px;
   }
   
   
@@ -79,119 +127,108 @@
   
   
   /* ------- légendes ------- */
-  .revenusFrance .legend {
-    margin-left: 50px;
+  .revenusFrance .legend{
+      margin-left: 50px;
   }
   
   .revenusFrance .col2 {
-    grid-column: 2 / 2;
-    grid-row: 1;
-    color: #fff;
-    grid-area: b;
-    align-self: center;
+      grid-column: 2 / 2;
+      grid-row:  1;
+      color: #fff;
+      grid-area: b;
+      align-self: center;
   }
   
   
-  .revenusFrance .l1 {
-    background-color: var(--color2);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px 100px 100px 100px;
+  .revenusFrance .l1{
+      background-color: var(--color5);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius:100px 100px 100px 100px;
   }
-  
-  .revenusFrance .l2 {
-    background-color: var(--color3);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px 100px 100px 100px;
+  .revenusFrance .l2{
+      background-color: var(--color6);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius:100px 100px 100px 100px;
+      color: black;
   }
-  
-  .revenusFrance .l3 {
-    background-color: var(--color4);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px 100px 100px 100px;
+  .revenusFrance .l3{
+      background-color: var(--color4);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius:100px 100px 100px 100px;
   }
+  .revenusFrance .l4{
+      background-color: var(--color3);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius:100px 100px 100px 100px;
+      color: black;
   
-  .revenusFrance .l4 {
-    background-color: var(--color5);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px 100px 100px 100px;
   }
-  
-  .revenusFrance.l5 {
-    background-color: var(--color6);
-    color: #000000;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px 100px 100px 100px;
-  }
-  
-  
-  
-  
-  .revenusFrance #dateDisplay {
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+  .revenusFrance .l5{
+      background-color: var(--color2);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius:100px 100px 100px 100px;
   }
   
   
   
   /* ----- tableau -----  */
-  .revenusFrance .tableau {
-    color: #fff;
-    display: flex;
-    justify-content: center;
+  .revenusFrance .tableau{
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10vh;
+  
   }
   
-  .revenusFrance td {
-    text-align: center;
-    padding: 4px;
-    margin: 4px;
+  .revenusFrance td{
+      text-align: center;
+      padding: 4px;
+      margin: 4px;
+  }
+  .revenusFrance tr{
+      text-align: center;
+      padding: 1000px;
   }
   
-  .revenusFrance tr {
-    text-align: center;
-    padding: 1000px;
+  
+  .revenusFrance table{
+      width: 100%; 
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
   
-  
-  .revenusFrance table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  .revenusFrance .entete{
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      font-weight: bold;
   }
   
-  .revenusFrance .entete {
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    font-weight: bold;
-  }
-  
-  .revenusFrance .donnes td {
-    border: 1px solid #fff;
-  
+  .revenusFrance .donnes td{
+      border: 1px solid #fff;
+      
   }
   
   .revenusFrance td p {
-    margin: 0;
+      margin: 0;
+  }
+  .revenusFrance table {
+      width: 1050px;
   }
   
-  .revenusFrance table {
-    width: 1050px;
-  }
+  
