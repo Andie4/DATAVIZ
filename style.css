@@ -513,7 +513,7 @@ h3 {
 /* css du tableau pour les revenus dans le monde */
 
 .accordion {
-  background-color: #620c65;
+  background-color: #290446;
   color: white;
   cursor: pointer;
   padding: 10px 20px;
@@ -525,10 +525,11 @@ h3 {
   box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
   margin-bottom: 10px;
   display: inline-block;
+  
 }
 
 .accordion:hover {
-  background-color: #632893;
+  background-color: #290446;
 }
 
 .panel {
@@ -560,7 +561,7 @@ th, td {
 }
 
 th {
-  background-color: #620c65;
+  background-color: #290446;
   color: white;
   border-bottom: 3px solid #370b4d;
 }
