@@ -4,12 +4,10 @@
 
 var indexPod = 0;
 
-
-
 fetch('data/franceAlbum.json').then(function (response) {
     response.json().then(function (dataPod) {
         const dataYear = Object.keys(dataPod)
-        var year =dataYear[indexPod];
+        var year = dataYear[indexPod];
 
         function affichePodium(year) {
             var albumAnnee = dataPod[year]
@@ -38,57 +36,49 @@ fetch('data/franceAlbum.json').then(function (response) {
             `
             );
 
-            var annee = document.querySelector("#topAlbumFr .year").innerHTML
-
-
         }
 
         affichePodium(year)
 
+        dataPod[dataYear[removeIndex(indexPod)]].forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += `
+            <img class="hide" src="${album.imgAlbum}" alt=""> `
+        );
+        dataPod[dataYear[addIndex(indexPod)]].forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += `
+            <img class="hide" src="${album.imgAlbum}" alt=""> `
+        );
+
         var buttonPrev = document.querySelector("#topAlbumFr .prevYear");
         buttonPrev.addEventListener("click", function () {
-            if ((indexPod - 1) >= 0) {
-                indexPod--
-                year = dataYear[indexPod]
-                affichePodium(year)
-            } else {
-                indexPod = dataYear.length - 1
-                year = dataYear[indexPod]               
-                affichePodium(year)
-            }
+            year = dataYear[removeIndex(indexPod)]
+            affichePodium(year)
+            indexPod = removeIndex(indexPod)
 
         });
 
         var buttonNext = document.querySelector("#topAlbumFr .nextYear");
         buttonNext.addEventListener("click", function () {
-            if ((indexPod + 1) < dataYear.length) {
-                indexPod++
-                year = dataYear[indexPod]
-                affichePodium(year)
-            } else {
-                indexPod = 0
-                year = dataYear[indexPod]
-                    affichePodium(year)
+            year = dataYear[addIndex(indexPod)]
+            affichePodium(year)
+            indexPod = addIndex(indexPod)
 
-            }
         });
 
-        function addIndex(index) {
-            if ((index + 1) < dataTAM.length) {
-                index++
+        function addIndex(indexPod) {
+            if ((indexPod + 1) < dataYear.length) {
+                indexPod++
             } else {
-                index = 0
+                indexPod = 0
             }
-            return index
+            return indexPod
         }
 
-        function removeIndex(index) {
-            if ((index - 1) >= 0) {
-                index--
+        function removeIndex(indexPod) {
+            if ((indexPod - 1) >= 0) {
+                indexPod--
             } else {
-                index = dataTAM.length - 1
+                indexPod = dataYear.length - 1
             }
-            return index
+            return indexPod
         }
 
 
