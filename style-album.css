@@ -30,6 +30,7 @@
     height: auto;
     margin: 0 auto;
     border-radius: 15px;
+    display: block;
 }
 
 /* Titre Album */
@@ -131,4 +132,21 @@
 
 .podium .top3 .TopTxt {
     padding: 0vh;
+}
+
+.podium .detail{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.podium .detail p{
+    margin: 0;
+}
+
+/* Chargement des images */
+
+.hide{
+    display: none;
 }
