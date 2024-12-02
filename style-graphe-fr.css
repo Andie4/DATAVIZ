@@ -1,26 +1,3 @@
-@font-face{
-  font-family: 'Mister Grape';
-  src: url('./mister_grape/Mister Grape - Personal Use.otf') ;
-  
-  }
-  
-  *,
-          *::after,
-          *::before {
-              box-sizing: border-box;
-          }
-  
-  body {
-      margin: 0;
-      height: 100vh;
-      background-position: center;
-      background-size: cover;
-      display: grid;
-      align-items: center;
-      background-color: #1E072D;
-      font-family: 'Inter';
-  }
-  
   :root {
       --color1: #000000;
       --color2: #A854B1;
@@ -33,8 +10,7 @@
   
   
   
-  
-  
+
   /* ------ titre ------- */
   .revenusFrance h2{
       font-size: 5rem;
