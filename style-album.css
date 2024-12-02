@@ -1,41 +1,134 @@
-.divAlbum{
+:root {
+    --color1: #000000;
+    --color2: #A854B1;
+    --color3: #A575D2;
+    --color4: #7C188D;
+    --color5: #5F2992;
+    --color6: #D9D9D9;
+    --color7: white;
+    --color8: #;
+    --color9: #;
+}
+
+
+
+.divAlbum {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3a0157;
-    width: 30vw;
+    justify-content: center;
+    background-color: var(--color5);
+    width: 25vw;
     margin: 0 auto;
-    padding: 5vh 0vw;
+    padding: 2vh 2.5vw 4vh;
     border-radius: 15px;
 }
 
 /* Photo album */
 
-.img-album{
+.img-album {
     width: 20vw;
     height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
-/* Titre musique */
+/* Titre Album */
+
+.name-album {
+    font-weight: bold;
+}
 
 /* Artiste */
 
 
 /* Icon lien musique */
-.lien-album{
+.lien-album {
     display: flex;
+    justify-content: center;
     gap: 25px;
     margin-top: 20px;
 }
-.icon-lien-album img{
+
+.icon-lien-album img {
     width: 60px;
     height: auto;
 }
 
 /* Bouton slider */
 
+.changeYear {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    margin: 5vh 0 20vh 0;
+    font-size: 1.3rem;
+}
+
+.prevYear,
+.nextYear {
+    background-color: transparent;
+    border: none;
+}
+
+.prevYear:hover,
+.nextYear:hover {
+    transform: scale(120%);
+}
+
+.prevYear img,
+.nextYear img {
+    width: 3vw;
+    height: auto;
+    background-color: none;
+    border: none;
+}
 
 
 
-/* =================================================================== Podium ====================================================================== */
+
+
+
+/* ========================================================== Podium ================================================================ */
+
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2vw;
+    margin: 15vh 0 5vh 0;
+}
+
+.podium .divAlbum {
+    margin: 0;
+}
+
+.podium .top1 {
+    background-color: darkmagenta;
+}
+
+.podium .top2 {
+    background-color: darkorchid;
+}
+
+.podium .top3 {
+    background-color: palevioletred;
+}
+
+.TopTxt {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.podium .top1 .TopTxt {
+    padding: 8vh;
+}
+
+.podium .top2 .TopTxt {
+    padding: 4vh;
+}
+
+.podium .top3 .TopTxt {
+    padding: 0vh;
+}
