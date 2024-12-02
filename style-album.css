@@ -1,0 +1,41 @@
+.divAlbum{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a0157;
+    width: 30vw;
+    margin: 0 auto;
+    padding: 5vh 0vw;
+    border-radius: 15px;
+}
+
+/* Photo album */
+
+.img-album{
+    width: 20vw;
+    height: auto;
+}
+
+/* Titre musique */
+
+/* Artiste */
+
+
+/* Icon lien musique */
+.lien-album{
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+.icon-lien-album img{
+    width: 60px;
+    height: auto;
+}
+
+/* Bouton slider */
+
+
+
+
+/* =================================================================== Podium ====================================================================== */

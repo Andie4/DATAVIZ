@@ -18,10 +18,10 @@ fetch('data/franceAlbum.json').then(function (response) {
             albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += '<div id="'
                 + album.top
                 + '">'
-                + '<img src="'
+                + '<img class="img-album" src="'
                 + album.imgAlbum
                 + ' " alt="">'
-                + '<div><p>#'
+                + '<p>#'
                 + album.top
                 + ' </p>'
                 + '<p>'
@@ -31,9 +31,9 @@ fetch('data/franceAlbum.json').then(function (response) {
                 + album.artist
                 + ' </p>'
                 + '<div>'
-                + '<a href="' + album.URLDeezer + '" alt=""><img src="img/logo_deezer.png" alt="lien vers l\'album sur Deezer"></a>'
-                + '<a href="' + album.URLSpotify + '" alt=""><img src="img/logo_spotify.png" alt="lien vers l\'album sur Spotify"></a>'
-                + '<a href="' + album.URLYoutube + '" alt=""><img src="img/logo_youtube.png" alt="lien vers l\'album sur Youtube"></a>'
+                + '<a class="icon-lien-album" href="' + album.URLDeezer + '" alt=""><img src="img/logo_deezer.png" alt="lien vers l\'album sur Deezer"></a>'
+                + '<a class="icon-lien-album" href="' + album.URLSpotify + '" alt=""><img src="img/logo_spotify.png" alt="lien vers l\'album sur Spotify"></a>'
+                + '<a class="icon-lien-album" href="' + album.URLYoutube + '" alt=""><img src="img/logo_youtube.png" alt="lien vers l\'album sur Youtube"></a>'
                 + ' </div>'
                 + ' </div>'
             );

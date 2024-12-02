@@ -27,7 +27,32 @@
   src: url(mister-grape.otf);
 }
 
-/* ============================================= Body ============================================= */
+/* =================================================== TITRE ======================================================= */
+
+h1 {
+  font-size: 7rem;
+  font-family: 'mister-grape', cursive;
+  font-weight: 200;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+h2 {
+  font-family: "mister-grape";
+  font-size: 5rem;
+  font-weight: 400;
+  margin-left: 11%;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+/* ============================================= BODY ============================================= */
 
 body {
   font-family: 'Lato', Arial,  sans-serif;
@@ -36,27 +61,6 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* ============================================= FOOTER ============================================= */
-
-footer{
-  background-color: var(--color3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5vw;
-  height: 50px;
-}
-
-footer a{
-  color: var(--color1);
-  text-decoration: none;
-  transition: 1s ease-in-out;
-}
-
-footer a:hover{
-  text-decoration: underline;
-  transition: 1s ease-in-out;
-}
 
 /* ============================================= HEADER ============================================= */
 
@@ -104,10 +108,13 @@ header div{
   position: relative;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> a2564592d27ee6a5b19c5adab270076508ec6558
 header div p {
   font-size: 1.2rem;
   font-family: 'Lato',sans-serif;
@@ -135,7 +142,9 @@ header div p {
   background-color: #814caf;
 }
 
+/* ============================================= FOOTER ============================================= */
 
+<<<<<<< HEAD
 /* ==================================================== Histoire ======================================================== */
 
 /* ------------ Div ----------------- */
@@ -467,98 +476,26 @@ h3 {
 }
 
 .revenusFrance .l2 {
+=======
+footer{
+>>>>>>> a2564592d27ee6a5b19c5adab270076508ec6558
   background-color: var(--color3);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 100px 100px 100px 100px;
-}
-
-.revenusFrance .l3 {
-  background-color: var(--color4);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 100px 100px 100px 100px;
-}
-
-.revenusFrance .l4 {
-  background-color: var(--color5);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 100px 100px 100px 100px;
-}
-
-.revenusFrance.l5 {
-  background-color: var(--color6);
-  color: #000000;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 100px 100px 100px 100px;
-}
-
-
-
-
-.revenusFrance #dateDisplay {
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-
-
-/* ----- tableau -----  */
-.revenusFrance .tableau {
-  color: #fff;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  height: 50px;
 }
 
-.revenusFrance td {
-  text-align: center;
-  padding: 4px;
-  margin: 4px;
+footer a{
+  color: var(--color1);
+  text-decoration: none;
+  transition: 1s ease-in-out;
 }
 
-.revenusFrance tr {
-  text-align: center;
-  padding: 1000px;
-}
-
-
-.revenusFrance table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.revenusFrance .entete {
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  font-weight: bold;
-}
-
-.revenusFrance .donnes td {
-  border: 1px solid #fff;
-
-}
-
-.revenusFrance td p {
-  margin: 0;
-}
-
-.revenusFrance table {
-  width: 1050px;
+footer a:hover{
+  text-decoration: underline;
+  transition: 1s ease-in-out;
 }
 
 

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-histoire.css">
+    <link rel="stylesheet" href="style-graphe-monde.css">
+    <link rel="stylesheet" href="style-graphe-fr.css">
+    <link rel="stylesheet" href="style-album.css">
     <!-- JS -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Typographie -->
@@ -104,7 +108,7 @@
           
         <!-- ------------------------------------  Graphique Industrie Musical Monde  ------------------------------------------ -->
         <!-- TODO : Remarque : C'est pas du tout accessible ( question couleur)  -->
-        <h2>Chiffre d'affaires de l'industrie musicale</h1>
+        <h2>Chiffre d'affaires de l'industrie musicale</h2>
             <div class="chart-container">
                 <svg id="chart" width="100%" height="500"></svg>
             </div>
@@ -194,32 +198,31 @@
                 </div>
 
 
-                <div class="date" id="dateDisplay"></div>
+                <h3 class="date" id="dateDisplay"></h3>
                 <div class="slider-container">
-                    <div class="clicker">
-                        <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt=""></button>
+                        <div class="clicker">
+                            <button class="" id="prev" onclick="prevSlide()"><img src="img/Vector 13.svg" alt="boutton année précédente"></button> 
+                                            
+                        </div>
+                                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                                <pie-chart data="51;35;7;6;1"></pie-chart>
+                                <pie-chart data="31;52;15;1;1"></pie-chart>
+        
+                        <div class="clicker">
+                            <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg" alt="boutton année suivante"></button>
+                        </div>
+                        
 
-                    </div>
-                    <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
-                    <pie-chart data="51;35;7;6;1"></pie-chart>
-                    <pie-chart data="31;52;15;1;1"></pie-chart>
-
-                    <div class="clicker">
-                        <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/Vector 14.svg"
-                                alt=""></button>
-                    </div>
-
-
-                    <div id="infoBulle" style="display:none;"></div>
+                <div id="infoBulle" style="display:none;"></div>
 
                     <div class="legend">
-                        <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
-                        <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
-                        <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
-                        <p class="col2"> <span class="l4">4</span> Téléchargement </p>
-                        <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
                     </div>
-
+                
                 </div>
 
                 <!-- TODO : Style : margin/padding top bottom -->
@@ -239,12 +242,12 @@
                                 <p class="col4">Streaming /<br> publicité et vidéo</p>
                             </td>
                             <td>
-                                <p class="col4">Téléchargement</p>
+                                <p class="col5">Téléchargement</p>
                             </td>
                             <td>
-                                <p class="col4">Téléphone <br> mobile</p>
+                                <p class="col6">Téléphone <br> mobile</p>
                             </td>
-
+                            
                         </tr>
 
                         <tr class="donnees">
@@ -261,10 +264,10 @@
                                 <p class="col4">3</p>
                             </td>
                             <td>
-                                <p class="col4">13</p>
+                                <p class="col5">13</p>
                             </td>
                             <td>
-                                <p class="col4">2</p>
+                                <p class="col6">2</p>
                             </td>
                         </tr>
 
@@ -282,10 +285,10 @@
                                 <p class="col4">7</p>
                             </td>
                             <td>
-                                <p class="col4">6</p>
+                                <p class="col5">6</p>
                             </td>
                             <td>
-                                <p class="col4">1</p>
+                                <p class="col6">1</p>
                             </td>
                         </tr>
 
@@ -303,10 +306,10 @@
                                 <p class="col4">15</p>
                             </td>
                             <td>
-                                <p class="col4">1</p>
+                                <p class="col5">1</p>
                             </td>
                             <td>
-                                <p class="col4">1</p>
+                                <p class="col6">1</p>
                             </td>
                         </tr>
                     </table>

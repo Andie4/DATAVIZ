@@ -1,0 +1,66 @@
+/* ==================================================== Graphique Monde ======================================================== */
+
+
+.diagram {
+    flex: 1;
+  }
+  
+  /* .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    align-items: center;
+  } */
+  
+  .diagram {
+    width: 50%;
+  }
+  
+  /* container qui regroupe les données du diagramme */
+  
+  .text-container {
+    background-color: #ad45dd;
+    color: white;
+    margin-right: 2vw;
+    text-align: left;
+  }
+  
+  /* style curseur */
+  #info-display {
+    position: absolute;
+    display: none;
+    background-color: #ad45dd;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    transition: all 0.1s ease;
+  }
+  
+  
+  .text-container {
+    width: 30%;
+    max-width: 700px;
+    background-color: #ad45dd;
+    padding: 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-align: left;
+    border-radius: 15px;
+  
+  }
+  
+  .diagram-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+  }
+  
+  
+  

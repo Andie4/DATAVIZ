@@ -1,0 +1,65 @@
+/* ==================================================== Histoire ======================================================== */
+
+/* ------------ Div ----------------- */
+#histoire{
+    margin-top: 10vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+  }
+  
+  /* ------------ Titre ----------------- */
+  
+  #histoire h2{
+    max-width: 400px ;
+  }
+  
+  /* ------------ Texte ----------------- */
+  
+  #histoire .description{
+    margin-right: 50px ;
+    width: 70vw;
+    max-width: 600px;
+  }
+  
+  /* ------------ Frise Chrono ----------------- */
+  
+  .chart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    margin-right: 40%;
+  }
+  
+  
+  .bar {
+    fill: #814caf;
+    transition: fill 0.3s;
+  }
+  
+  .bar:hover {
+    fill: #ad45dd;
+  }
+  
+  .axis text {
+    font-size: 12px;
+    fill: #333;
+  }
+  
+  .diagram-container {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+  }
+  
+  .chart-container {
+    flex: 1;
+    padding: 10px;
+  }
+  
