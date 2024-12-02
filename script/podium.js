@@ -15,27 +15,27 @@ fetch('data/franceAlbum.json').then(function (response) {
             var albumAnnee = dataPod[year]
             document.querySelector("#topAlbumFr .year").innerHTML = year
             document.querySelector("#topAlbumFr .podium").innerHTML = ""
-            albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += '<div class="divAlbum '
-                + 'top'+album.top
-                + '">'
-                + '<p class="TopTxt">#'
-                + album.top
-                + ' </p>'
-                + '<img class="img-album" src="'
-                + album.imgAlbum
-                + ' " alt=""><div>'
-                + '<p>'
-                + album.album
-                + ' </p>'
-                + '<p>'
-                + album.artist
-                + ' </p></div>'
-                + '<div class="lien-album">'
-                + '<a class="icon-lien-album" href="' + album.URLDeezer + '" alt=""><img src="img/logo_deezer.png" alt="lien vers l\'album sur Deezer"></a>'
-                + '<a class="icon-lien-album" href="' + album.URLSpotify + '" alt=""><img src="img/logo_spotify.png" alt="lien vers l\'album sur Spotify"></a>'
-                + '<a class="icon-lien-album" href="' + album.URLYoutube + '" alt=""><img src="img/logo_youtube.png" alt="lien vers l\'album sur Youtube"></a>'
-                + ' </div>'
-                + ' </div>'
+            albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += `
+            <div class="divAlbum top${album.top}">
+                <p class="TopTxt"># ${album.top}</p>
+                <img class="img-album" src="${album.imgAlbum}" alt="">
+                <div>
+                    <p>${album.album}</p>
+                    <p>${album.artist}</p>
+                </div>
+                <div class="lien-album">
+                    <a class="icon-lien-album" href="${album.URLDeezer}" alt="">
+                        <img src="img/logo_deezer.png" alt="lien vers l\'album sur Deezer">
+                    </a>
+                    <a class="icon-lien-album" href="${album.URLSpotify}" alt="">
+                        <img src="img/logo_spotify.png" alt="lien vers l\'album sur Spotify">
+                    </a>
+                    <a class="icon-lien-album" href="${album.URLYoutube}" alt="">
+                        <img src="img/logo_youtube.png" alt="lien vers l\'album sur Youtube">
+                    </a>
+                </div>
+            </div>
+            `
             );
 
             var annee = document.querySelector("#topAlbumFr .year").innerHTML
