@@ -2,11 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     background-color: #3a0157;
     width: 30vw;
     margin: 0 auto;
-    padding: 5vh 0vw;
+    padding: 7vh 5vw;
     border-radius: 15px;
 }
 
@@ -15,6 +14,7 @@
 .img-album{
     width: 20vw;
     height: auto;
+    margin: 0 auto;
 }
 
 /* Titre musique */
@@ -25,6 +25,7 @@
 /* Icon lien musique */
 .lien-album{
     display: flex;
+    justify-content: center;
     gap: 25px;
     margin-top: 20px;
 }
@@ -35,7 +36,56 @@
 
 /* Bouton slider */
 
+.changeYear{
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    margin: 5vh 0 20vh 0;
+    font-size: 1.3rem;
+}
 
 
 
-/* =================================================================== Podium ====================================================================== */
+/* ========================================================== Podium ================================================================ */
+
+
+.podium{
+    display: flex;
+    justify-content: center;
+    margin: 15vh 0 5vh 0;
+}
+
+.podium .divAlbum{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #300d42;
+    width: 20vw;
+    /* margin: 0 auto; */
+    padding: 5vh 2.5vw;
+    border-radius: 15px;
+}
+
+.podium .divAlbum .img-album{
+    width: 15vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.TopTxt{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

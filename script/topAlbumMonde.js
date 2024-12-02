@@ -14,6 +14,9 @@ fetch('data/mondialAlbum.json').then(function (response) {
             var album = dataTAM[index]
             document.querySelector("#topAlbumMonde .year").innerHTML = album.year
             document.querySelector("#topAlbumMonde .album").innerHTML = '<div class="divAlbum">'
+                + '<p class="TopTxt">'
+                + album.year
+                + ' </p>'
                 + '<img class="img-album" src="'
                 + album.imgAlbum
                 + ' " alt=""><div>'
@@ -29,7 +32,7 @@ fetch('data/mondialAlbum.json').then(function (response) {
                 + '<a class="icon-lien-album" href="' + album.URLYoutube + '" alt=""><img src="img/logo_youtube.png" alt="lien vers l\'album sur Youtube"></a>'
                 + ' </div>'
                 + ' </div>'
-                
+
         }
 
         afficheAlbum(index)
