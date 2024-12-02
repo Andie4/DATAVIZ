@@ -30,6 +30,7 @@
     height: auto;
     margin: 0 auto;
     border-radius: 15px;
+    display: block;
 }
 
 /* Titre Album */
@@ -141,13 +142,17 @@
 }
 
 
-.podium .detail{
-    height: 90px;
+.detail{
+    height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
 }
-.podium .detail p{
+.detail p{
     margin: 0;
+}
+
+.hide{
+    display: none;
 }
