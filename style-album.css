@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--color5);
-    width: 25vw;
+    width: 22vw;
     margin: 0 auto;
     padding: 2vh 2.5vw 4vh;
     border-radius: 15px;
@@ -26,7 +26,7 @@
 /* Photo album */
 
 .img-album {
-    width: 20vw;
+    width: 15vw;
     height: auto;
     margin: 0 auto;
     border-radius: 15px;
@@ -78,7 +78,7 @@
 
 .prevYear img,
 .nextYear img {
-    width: 3vw;
+    width: 2vw;
     height: auto;
     background-color: none;
     border: none;
@@ -112,8 +112,19 @@
     background-color: darkorchid;
 }
 
-.podium .top3 {
+.podium .top3  {
     background-color: palevioletred;
+}
+
+/* Image podium */
+
+
+.podium .top2 .img-album {
+    width: 12vw;
+}
+
+.podium .top3 .img-album {
+    width: 10vw;
 }
 
 .TopTxt {
@@ -123,16 +134,14 @@
 }
 
 .podium .top1 .TopTxt {
-    padding: 8vh;
+    padding: 6vh 0 0 0;
 }
 
 .podium .top2 .TopTxt {
-    padding: 4vh;
+    padding: 3vh 0 0 0;
 }
 
-.podium .top3 .TopTxt {
-    padding: 0vh;
-}
+
 
 .podium .detail{
     height: 90px;
@@ -143,10 +152,3 @@
 }
 .podium .detail p{
     margin: 0;
-}
-
-/* Chargement des images */
-
-.hide{
-    display: none;
-}

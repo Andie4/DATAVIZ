@@ -61,6 +61,9 @@ body {
   color: rgb(255, 255, 255);
 }
 
+section{
+  margin: 4vh 0;
+}
 
 /* ============================================= HEADER ============================================= */
 
@@ -103,7 +106,7 @@ header div{
   z-index: 2;
   width: 60vw;
   max-width: 750px;
-  top: 30vh;
+  top: 20vh;
   left: 37%;
   position: relative;
 }
@@ -136,6 +139,337 @@ header div p {
 }
 
 /* ============================================= FOOTER ============================================= */
+
+/* ==================================================== Histoire ======================================================== */
+
+/* ------------ Div ----------------- */
+#histoire{
+  margin-top: 10vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
+
+/* ------------ Titre ----------------- */
+
+#histoire h2{
+  max-width: 400px ;
+}
+
+/* ------------ Texte ----------------- */
+
+#histoire .description{
+  margin-right: 50px ;
+  width: 70vw;
+  max-width: 600px;
+}
+
+/* ------------ Frise Chrono ----------------- */
+/* Container de la frise */
+.timeline-container {
+  margin-bottom: 30vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Espaces égaux entre les items */
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-top: 2px solid #814caf; /* Ligne centrale */
+  box-sizing: border-box;
+
+}
+
+/* Éléments de la timeline */
+.timeline-item {
+  text-align: center;
+  position: relative;
+  flex: 1; /* Permet une répartition équitable */
+}
+
+.year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  background-color: #814caf;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.description {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #814caf;
+  z-index: 1;
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column; /* Passe en colonne */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    border-top: none; /* Supprime la ligne centrale horizontale */
+    position: static; /* Remet la disposition par défaut pour éviter des conflits */
+  }
+
+  .timeline-item {
+    flex: unset; /* Permet une largeur automatique */
+    margin-bottom: 20px; /* Ajoute un espacement entre les items */
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #814caf;
+    z-index: -1;
+  }
+
+  .marker {
+    margin: 10px 0; /* Ajuste le placement des marqueurs */
+  }
+
+  .year,
+  .description {
+    text-align: center; /* Centrer le texte pour un affichage vertical */
+  }
+}
+
+/* Ajustements pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .year {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .marker {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+
+/* ==================================================== Graphique Monde ======================================================== */
+
+
+.diagram {
+  flex: 1;
+}
+
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+  align-items: center;
+} */
+
+.diagram {
+  width: 50%;
+}
+
+/* container qui regroupe les données du diagramme */
+
+.text-container {
+  background-color: #ad45dd;
+  color: white;
+  margin-right: 2vw;
+  text-align: left;
+}
+
+/* style curseur */
+#info-display {
+  position: absolute;
+  display: none;
+  background-color: #ad45dd;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  transition: all 0.1s ease;
+}
+
+
+.text-container {
+  width: 30%;
+  max-width: 700px;
+  background-color: #ad45dd;
+  padding: 10px;
+  color: white;
+  font-size: 0.9rem;
+  text-align: left;
+  border-radius: 15px;
+  position: relative;
+  bottom: 300px;
+
+}
+
+.diagram-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px 0;
+}
+
+
+
+
+
+h2 {
+  font-family: "mister-grape";
+  font-size: 5rem;
+  font-weight: 400;
+  margin-left: 11%;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+
+
+
+
+/* ============================================= SECTION DONNÉES REVENUS EN FRANCE ============================================= */
+
+/* ------ titre ------- */
+.revenusFrance h2 {
+  font-size: 5rem;
+  font-family: 'mister-grape';
+  font-weight: lighter;
+  color: var(--color7);
+  margin-top: 0.5vh;
+  margin-bottom: 2vh;
+}
+
+
+.revenusFrance .description {
+  color: #fff;
+}
+
+
+.revenusFrance .date {
+  padding-right: 38vh;
+}
+
+
+
+
+/* ----- camembert ----- */
+.revenusFrance .slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.revenusFrance .cliker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.revenusFrance svg {
+  width: 100px;
+  height: 100px;
+
+}
+
+.revenusFrance pie-chart.active {
+  display: block;
+  opacity: 1;
+}
+
+.revenusFrance pie-chart {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  position: relative;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+
+/* ----- flèches -----  */
+.revenusFrance button {
+  width: 8vh;
+  background-color: #1E072D;
+  border-radius: 20vh;
+  border: #b16cdf;
+  margin: 30px;
+
+}
+
+.revenusFrance img {
+  width: 50px;
+}
+
+
+
+
+
+
+/* ------- légendes ------- */
+.revenusFrance .legend {
+  margin-left: 50px;
+}
+
+.revenusFrance .col2 {
+  grid-column: 2 / 2;
+  grid-row: 1;
+  color: #fff;
+  grid-area: b;
+  align-self: center;
+}
+
+
+.revenusFrance .l1 {
+  background-color: var(--color2);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 100px 100px 100px 100px;
+}
+
 
 footer{
   background-color: var(--color3);
@@ -171,4 +505,85 @@ footer a:hover{
   position: absolute !important;
   width: 1px !important;
   white-space: nowrap !important;
+}
+
+/* css du tableau pour les revenus dans le monde */
+
+.accordion {
+  background-color: #b076dd;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  left: 1150px;
+  bottom: 30vh;
+}
+
+.accordion:hover {
+  background-color: #642892;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #370b4d;
+  padding: 0 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: 0 auto;
+  width: 50%; /* Limite la largeur totale de la zone */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden; /* Nécessaire pour arrondir le tableau */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #290446;
+  color: white;
+  border-bottom: 3px solid #370b4d;
+}
+
+td {
+  background-color: #370b4d;
+  border: 1px solid rgba(221, 221, 221, 0.1);
+  transition: background-color 0.3s;
+}
+
+td:hover {
+  background-color: #4b0d58;
+}
+
+tr:nth-child(even) td {
+  background-color: #290446;
+}
+
+h1 {
+  color: #fffcfc;
+  font-family: "mister-grape";
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 7rem;
+  font-weight: 400;
 }

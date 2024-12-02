@@ -19,8 +19,8 @@ fetch('data/franceAlbum.json').then(function (response) {
             <div class="divAlbum top${album.top}">
                 <p class="TopTxt"># ${album.top}</p>
                 <img class="img-album" src="${album.imgAlbum}" alt="">
-                <div>
-                    <p>${album.album}</p>
+                <div class="detail">
+                    <p class="name-album">${album.album}</p>
                     <p>${album.artist}</p>
                 </div>
                 <div class="lien-album">
