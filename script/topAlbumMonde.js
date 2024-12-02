@@ -20,7 +20,7 @@ fetch('data/mondialAlbum.json').then(function (response) {
                 + '<img class="img-album" src="'
                 + album.imgAlbum
                 + ' " alt=""><div>'
-                + '<p>'
+                + '<p class="name-album">'
                 + album.album
                 + ' </p>'
                 + '<p>'

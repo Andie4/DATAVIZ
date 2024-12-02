@@ -1,11 +1,11 @@
 .divAlbum{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #3a0157;
-    width: 30vw;
+    width: 25vw;
     margin: 0 auto;
-    padding: 7vh 5vw;
+    padding: 2vh 2.5vw 4vh;
     border-radius: 15px;
 }
 
@@ -15,9 +15,14 @@
     width: 20vw;
     height: auto;
     margin: 0 auto;
+    border-radius: 15px;
 }
 
-/* Titre musique */
+/* Titre Album */
+
+.name-album{
+    font-weight: bold;
+}
 
 /* Artiste */
 
@@ -55,25 +60,20 @@
     margin: 15vh 0 5vh 0;
 }
 
-.podium .divAlbum{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #300d42;
-    width: 20vw;
-    /* margin: 0 auto; */
-    padding: 5vh 2.5vw;
-    border-radius: 15px;
+.top1{
+    padding: 5vh 0;
 }
-
-.podium .divAlbum .img-album{
-    width: 15vw;
-    height: auto;
-    margin: 0 auto;
+.top2{
+    padding: 3vh 0;
+}
+.top3{
+    padding: 1vh 0;
 }
 
 .TopTxt{
+    font-weight: bold;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 

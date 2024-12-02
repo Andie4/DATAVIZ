@@ -16,20 +16,20 @@ fetch('data/franceAlbum.json').then(function (response) {
             document.querySelector("#topAlbumFr .year").innerHTML = year
             document.querySelector("#topAlbumFr .podium").innerHTML = ""
             albumAnnee.forEach((album) => document.querySelector("#topAlbumFr .podium").innerHTML += '<div class="divAlbum '
-                + album.top
+                + 'top'+album.top
                 + '">'
                 + '<p class="TopTxt">#'
                 + album.top
                 + ' </p>'
                 + '<img class="img-album" src="'
                 + album.imgAlbum
-                + ' " alt="">'
+                + ' " alt=""><div>'
                 + '<p>'
                 + album.album
                 + ' </p>'
                 + '<p>'
                 + album.artist
-                + ' </p>'
+                + ' </p></div>'
                 + '<div class="lien-album">'
                 + '<a class="icon-lien-album" href="' + album.URLDeezer + '" alt=""><img src="img/logo_deezer.png" alt="lien vers l\'album sur Deezer"></a>'
                 + '<a class="icon-lien-album" href="' + album.URLSpotify + '" alt=""><img src="img/logo_spotify.png" alt="lien vers l\'album sur Spotify"></a>'
