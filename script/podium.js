@@ -73,7 +73,23 @@ fetch('data/franceAlbum.json').then(function (response) {
             }
         });
 
+        function addIndex(index) {
+            if ((index + 1) < dataTAM.length) {
+                index++
+            } else {
+                index = 0
+            }
+            return index
+        }
 
+        function removeIndex(index) {
+            if ((index - 1) >= 0) {
+                index--
+            } else {
+                index = dataTAM.length - 1
+            }
+            return index
+        }
 
 
 

@@ -16,8 +16,10 @@ fetch('data/mondialAlbum.json').then(function (response) {
             document.querySelector('#topAlbumMonde .album').innerHTML = `
             <div class="divAlbum">
                 <p class="TopTxt">${album.year}</p>
+                <img class="hide" src="${dataTAM[removeIndex(index)].imgAlbum}" alt="">
                 <img class="img-album" src="${album.imgAlbum}" alt="">
-                <div>
+                <img class="hide" src="${dataTAM[addIndex(index)].imgAlbum}" alt="">
+                <div class="detail">
                     <p class="name-album">${album.album}</p>
                     <p>${album.artist}</p>
                 </div>
@@ -41,29 +43,42 @@ fetch('data/mondialAlbum.json').then(function (response) {
 
         var buttonPrev = document.querySelector("#topAlbumMonde .prevYear");
         buttonPrev.addEventListener("click", function () {
-            // console.log("previous year");
-            if ((index - 1) >= 0) {
-                index--
-                afficheAlbum(index)
-            } else {
-                index = dataTAM.length - 1
-                afficheAlbum(index)
-            }
+            afficheAlbum(removeIndex(index))
+            index = addIndex(index)
 
         });
 
         var buttonNext = document.querySelector("#topAlbumMonde .nextYear");
         buttonNext.addEventListener("click", function () {
-            // console.log("next year");
+            afficheAlbum(addIndex(index))
+            index = addIndex(index)
+        });
+
+
+        function addIndex(index) {
             if ((index + 1) < dataTAM.length) {
                 index++
-                afficheAlbum(index)
             } else {
                 index = 0
-                afficheAlbum(index)
-
             }
-        });
+            return index
+        }
+
+        function removeIndex(index) {
+            if ((index - 1) >= 0) {
+                index--
+            } else {
+                index = dataTAM.length - 1
+            }
+            return index
+        }
+
+
+
+
+
+
+
 
 
     });
