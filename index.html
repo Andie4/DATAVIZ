@@ -32,7 +32,7 @@
         <div class="text-content">
             <h1>DataMusic</h1>
             <p>Découvrez toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en
-                France et dans le monde. Revenus, tendances, évolutions... Plongez dans les coulisses de
+                France et dans le monde. <br>Revenus, tendances, évolutions... Plongez dans les coulisses de
                 l’industrie musicale pour voir d’un autre œil votre passion.</p>
             <!-- TODO : Mettre un lien valable et changer le call to action -->
             <a href="#histoire" class="btn-see-more">Découvrir son évolution</a>
@@ -68,43 +68,59 @@
 
         <!-- ------------------------------  Frise chronologique en pleine largeur  ----------------------------------------- -->
         <!-- TODO : Possible de le faire avec du JS et JSON : plus opti peut-être -->
-        <div class="timeline-container">
-            <div class="timeline-item">
-              <div class="year">1963</div>
-              <div class="marker"></div>
-              <div class="description">Cassette</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">1970</div>
-              <div class="marker"></div>
-              <div class="description">Vinyles</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">1979</div>
-              <div class="marker"></div>
-              <div class="descriptionhttp://127.0.0.1:5501/img/disque.svg">Baladeur cassette</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">1983</div>
-              <div class="marker"></div>
-              <div class="description">CD</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">1984</div>
-              <div class="marker"></div>
-              <div class="description">Baladeur CD</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">1998</div>
-              <div class="marker"></div>
-              <div class="description">Baladeur MP3</div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2001</div>
-              <div class="marker"></div>
-              <div class="description">Ipod</div>
+        <div class="timeline-wrapper">
+            <div class="timeline-container">
+              <!-- Élément de la frise : Cassette -->
+              <div class="timeline-item">
+                <div class="year">1963</div>
+                <div class="marker"></div>
+                <div class="description">Cassette</div>
+              </div>
+          
+              <!-- Élément de la frise : Vinyles -->
+              <div class="timeline-item">
+                <div class="year">1970</div>
+                <div class="marker"></div>
+                <div class="description">Vinyles</div>
+              </div>
+          
+              <!-- Élément de la frise : Baladeur cassette -->
+              <div class="timeline-item">
+                <div class="year">1979</div>
+                <div class="marker"></div>
+                <div class="description">Baladeur cassette</div>
+              </div>
+          
+              <!-- Élément de la frise : CD -->
+              <div class="timeline-item">
+                <div class="year">1983</div>
+                <div class="marker"></div>
+                <div class="description">CD</div>
+              </div>
+          
+              <!-- Élément de la frise : Baladeur CD -->
+              <div class="timeline-item">
+                <div class="year">1984</div>
+                <div class="marker"></div>
+                <div class="description">Baladeur CD</div>
+              </div>
+          
+              <!-- Élément de la frise : Baladeur MP3 -->
+              <div class="timeline-item">
+                <div class="year">1998</div>
+                <div class="marker"></div>
+                <div class="description">Baladeur MP3</div>
+              </div>
+          
+              <!-- Élément de la frise : iPod -->
+              <div class="timeline-item">
+                <div class="year">2001</div>
+                <div class="marker"></div>
+                <div class="description">iPod</div>
+              </div>
             </div>
           </div>
+          
           
         <!-- ------------------------------------  Graphique Industrie Musical Monde  ------------------------------------------ -->
         <!-- TODO : Remarque : C'est pas du tout accessible ( question couleur)  -->
@@ -320,7 +336,10 @@
 
             <section id="topAlbumFr">
                 <h2>Top album en France</h2>
-                <p>Un peu plus d'artiste Français mis en avant dans ce top 3 des albums les plus vendu pour les années 2012, 2017 et 2021 !</p>
+                <p class="description1">
+                    Un peu plus d'artistes français mis en avant dans ce top 3 des albums les plus vendus pour les années 2012, 2017 et 2021 !
+                </p>
+                
                 
                     <div class="podium "></div>
                 
