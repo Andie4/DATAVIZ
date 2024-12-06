@@ -211,33 +211,44 @@
             <section class="revenusFrance">
                 <div>
                     <h2>Revenus en France</h2>
-                    <p class="description3">Répartition du chiffre d'affaires selon le support de vente</p>
+                    <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
                 </div>
-                <div class="vide1"></div>
-                <div class="one">
-                    <h3 class="date" id="dateDisplay"></h3>
-                </div>
-                <div class="vide2"></div>
                 
-                <div class="flex">
-                    <pie-chart data="74;7;3;13;2" class="active three"></pie-chart>
-                    <pie-chart data="51;35;7;6;1" class="active four"></pie-chart>
-                    <pie-chart data="31;52;15;1;1" class="active five"></pie-chart>
-                </div>
-                                
-        
-
-                <div id="infoBulle" style="display:none;"></div>
-
-                    <div class=" five">
-                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
-                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
-                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
-                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
-                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                <div class="slider-container">
+                    <div class="clicker">
+                        <button class="" id="prev" onclick="prevSlide()"><img src="images/Vector 13.svg" alt="boutton année précédente"></button>  
                     </div>
-                
+        
+                    <h3 class="date" id="dateDisplay"></h3>
+        
+                    <div class="clicker">
+                        <button id="next" class="fleche droite" onclick="nextSlide()"><img src="images/Vector 14.svg" alt="boutton année suivante"></button>
+                    </div>
                 </div>
+    
+                
+    
+                    <div class="diagramme">  
+                        <div>
+                            <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                            <pie-chart data="51;35;7;6;1"></pie-chart>
+                            <pie-chart data="31;52;15;1;1"></pie-chart>
+    
+                        </div>                   
+                                    
+                            
+    
+                            <div id="infoBulle" style="display:none;"></div>
+    
+                            <div class="legend">
+                                <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                                <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                                <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                                <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                                <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                            </div>
+                    
+                    </div>
 
                 <!-- TODO : Style : margin/padding top bottom -->
                 <div class="tableau">
@@ -328,6 +339,7 @@
                         </tr>
                     </table>
                 </div>
+                <p class="source"><span class="bold">Source:</span> Syndicat national de l'édition phonographique/DEPS, Ministère de la Culture, 2022</p>
             </section>
 
 

@@ -8,7 +8,9 @@
       --color7: white;
   }
   
-  
+  .bold{
+    font-weight: bold;
+}
   
 
   /* ------ titre ------- */
@@ -134,6 +136,21 @@
   }
   
   
+.diagramme{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.source{
+    color:var(--color6);
+    margin-bottom: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
   
   
   
@@ -202,9 +219,7 @@
   .revenusFrance .tableau{
       color: #fff;
       display: flex;
-      justify-content: center;
-      margin-bottom: 10vh;
-  
+      justify-content: center;  
   }
   
   .revenusFrance td{
