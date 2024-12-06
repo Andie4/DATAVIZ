@@ -27,13 +27,13 @@ class PieChart extends HTMLElement{
         const shadow = this.attachShadow({mode: 'open'});
         const colors = ["#5F2992", "#D9D9D9", "#7C188D", "#A575D2", "#A854B1", "#000000", ];
         this.data = this.getAttribute('data').split(';').map(v => parseFloat(v));
-        const svg = strToDom(`<svg viewBox="-1 -1 2 2">
+        const svg = strToDom(`<svg viewBox="-1 -1 3 3">
             <g mask="url(#graphMask)">
 
             </g>
 
             <mask  id="graphMask">
-                <rect fill="white" x="-1" y="-1" width="2" height="2"/>
+                <rect fill="white" x="-1" y="-1" width="3" height="3"/>
                 <circle r="0.2" fill="black"/>   
             </mask>
         </svg>`);
@@ -99,47 +99,6 @@ class PieChart extends HTMLElement{
 
 customElements.define('pie-chart', PieChart);
 
-
-
-
-// ----------------------slider --------------------
-let currentSlide = 0;
-
-const dates = ['2012','2017','2021'];
-
-function updateSlider() {
-    const slides = document.querySelectorAll('pie-chart');
-
-    // affiche la date associé
-    const dateDisplay = document.getElementById('dateDisplay'); 
-
-    slides.forEach((slide, index) => {
-        slide.classList.remove('active', 'fade-in'); 
-        if (index === currentSlide) {
-            slide.classList.add('active');
-
-            setTimeout(() => {
-                slide.classList.add('fade-in');
-            }, 18);  
-
-            dateDisplay.textContent = dates[index]; 
-        }
-    });
-}
-
-function prevSlide() {
-    const slides = document.querySelectorAll('pie-chart');
-    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-    updateSlider();
-}
-
-function nextSlide() {
-    const slides = document.querySelectorAll('pie-chart');
-    currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-    updateSlider();
-}
-
-updateSlider();
 
 
 

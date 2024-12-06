@@ -128,6 +128,7 @@
             <div class="chart-container">
                 <svg id="chart" width="100%" height="500"></svg>
             </div>
+
             <div class="container">
                 <div class="diagram">
                     <div id="info-display" class="info-display"></div>
@@ -138,6 +139,7 @@
                         monde, de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus haut 26 milliards atteint récemment en 2022.</p>
                 </div>
             </div>
+
             <button class="accordion">Afficher les données</button>
             <div class="panel">
               <table>
@@ -211,26 +213,23 @@
                     <h2>Revenus en France</h2>
                     <p class="description3">Répartition du chiffre d'affaires selon le support de vente</p>
                 </div>
-
-
-                <h3 class="date" id="dateDisplay"></h3>
-                <div class="slider-container">
-                        <div class="clicker">
-                            <button class="" id="prev" onclick="prevSlide()"><img src="img/fleche_gauche.svg" alt="boutton année précédente"></button> 
-                                            
-                        </div>
-                                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
-                                <pie-chart data="51;35;7;6;1"></pie-chart>
-                                <pie-chart data="31;52;15;1;1"></pie-chart>
+                <div class="vide1"></div>
+                <div class="one">
+                    <h3 class="date" id="dateDisplay"></h3>
+                </div>
+                <div class="vide2"></div>
+                
+                <div class="flex">
+                    <pie-chart data="74;7;3;13;2" class="active three"></pie-chart>
+                    <pie-chart data="51;35;7;6;1" class="active four"></pie-chart>
+                    <pie-chart data="31;52;15;1;1" class="active five"></pie-chart>
+                </div>
+                                
         
-                        <div class="clicker">
-                            <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/fleche_droite.svg" alt="boutton année suivante"></button>
-                        </div>
-                        
 
                 <div id="infoBulle" style="display:none;"></div>
 
-                    <div class="legend">
+                    <div class=" five">
                     <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
                     <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
                     <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
