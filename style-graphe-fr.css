@@ -11,7 +11,10 @@
   .bold{
     font-weight: bold;
 }
-  
+
+.invisible{
+    display: none;
+}
 
   /* ------ titre ------- */
   .revenusFrance h2{
