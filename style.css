@@ -150,7 +150,7 @@ header div p {
   display: inline-block;
   padding: 10px 20px;
   margin: 25px;
-  background-color: #ad45dd;
+  background-color: #A854B1 ;
   color: #ffffff;
   text-decoration: none;
   border-radius: 20px;
@@ -524,7 +524,7 @@ footer a:hover{
 /* css du tableau pour les revenus dans le monde */
 
 .accordion {
-  background-color: #b076dd;
+  background-color: #A854B1;
   color: white;
   cursor: pointer;
   padding: 10px 20px;
