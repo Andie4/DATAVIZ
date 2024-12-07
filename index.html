@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style-album.css">
     <!-- JS -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Typographie -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,7 +172,9 @@
             <!-- TODO : Finir la section -->
             <section id="BestSellingAlbum">
                 <h2>L'Album le plus vendu chaque année</h2>
-
+                <div>
+                    <canvas id="BestSellingAlbumGraph"></canvas>
+                </div>                  
             </section>
 
             <!-- -------------  Top Album Monde  ----------- -->
@@ -348,6 +351,7 @@
     <script src="script/script.js"></script>
     <script src="script/podium.js"></script>
     <script src="script/topAlbumMonde.js"></script>
+    <script src="script/graph-album.js"></script>
 
 </body>
 
