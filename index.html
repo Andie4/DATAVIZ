@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataMusic">
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-histoire.css">
@@ -35,7 +36,7 @@
                 France et dans le monde. <br>Revenus, tendances, évolutions... Plongez dans les coulisses de
                 l’industrie musicale pour voir d’un autre œil votre passion.</p>
             <!-- TODO : Mettre un lien valable et changer le call to action -->
-            <a href="#histoire" class="btn-see-more">Découvrir son évolution</a>
+            <a href="#histoire" class="btn-see-more" aria-label="Découvrez son évolution">Découvrir son évolution</a>
         </div>
 
     </header>
@@ -128,6 +129,7 @@
             <div class="chart-container">
                 <svg id="chart" width="100%" height="500"></svg>
             </div>
+
             <div class="container">
                 <div class="diagram">
                     <div id="info-display" class="info-display"></div>
@@ -138,9 +140,11 @@
                         monde, de la musique est et à toujours été haut. Le plus bas étant de 14,1 milliards de dollars et le plus haut 26 milliards atteint récemment en 2022.</p>
                 </div>
             </div>
-            <button class="accordion">Afficher les données</button>
+
+            <button class="accordion" aria-label="Afficher les données sur le chiffre d'affaires de l'industrie musicale">Afficher les données</button>
             <div class="panel">
               <table>
+                <caption><span class="invisible">Chiffre d'affaires de l'industrie musicale</span></caption>
                 <thead>
                   <tr>
                     <th>Année</th>
@@ -209,126 +213,87 @@
             <section class="revenusFrance">
                 <div>
                     <h2>Revenus en France</h2>
-                    <p class="description3">Répartition du chiffre d'affaires selon le support de vente</p>
+                    <p class="description">Répartition du chiffre d'affaires selon le support de vente</p>
                 </div>
-
-
-                <h3 class="date" id="dateDisplay"></h3>
-                <div class="slider-container">
-                        <div class="clicker">
-                            <button class="" id="prev" onclick="prevSlide()"><img src="img/fleche_gauche.svg" alt="boutton année précédente"></button> 
-                                            
-                        </div>
-                                <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
-                                <pie-chart data="51;35;7;6;1"></pie-chart>
-                                <pie-chart data="31;52;15;1;1"></pie-chart>
-        
-                        <div class="clicker">
-                            <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/fleche_droite.svg" alt="boutton année suivante"></button>
-                        </div>
-                        
-
-                <div id="infoBulle" style="display:none;"></div>
-
-                    <div class="legend">
-                    <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
-                    <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
-                    <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
-                    <p class="col2"> <span class="l4">4</span> Téléchargement </p>
-                    <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
-                    </div>
                 
+                <div class="slider-container">
+                    <div class="clicker">
+                        <button class="" id="prev" onclick="prevSlide()"><img src="img/fleche_gauche.svg" alt="boutton année précédente"></button>  
+                    </div>
+        
+                    <h3 class="date" id="dateDisplay"></h3>
+        
+                    <div class="clicker">
+                        <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/fleche_droite.svg" alt="boutton année suivante"></button>
+                    </div>
                 </div>
+    
+                
+    
+                    <div class="diagramme">  
+                        <div>
+                            <pie-chart data="74;7;3;13;2" class="active"></pie-chart>
+                            <pie-chart data="51;35;7;6;1"></pie-chart>
+                            <pie-chart data="31;52;15;1;1"></pie-chart>
+    
+                        </div>                   
+                                    
+                            
+    
+                            <div id="infoBulle" style="display:none;"></div>
+    
+                            <div class="legend">
+                                <p class="col2"> <span class="l1">1</span> Ventes physiques </p>
+                                <p class="col2"> <span class="l2">2</span> Streaming / Abonnments</p>
+                                <p class="col2"> <span class="l3">3</span> Streaming / publicité et vidéo </p>
+                                <p class="col2"> <span class="l4">4</span> Téléchargement </p>
+                                <p class="col2"> <span class="l5">5</span> Téléphone mobile </p>
+                            </div>
+                    
+                    </div>
 
                 <!-- TODO : Style : margin/padding top bottom -->
                 <div class="tableau">
                     <table>
+                        <caption><span class="invisible">Répartition du chiffre d'affaires selon le support de vente</span></caption>
                         <tr class="entete">
-                            <td>
-                                <p class="col1">Année</p>
-                            </td>
-                            <td>
-                                <p class="col2">Ventes <br>physiques</p>
-                            </td>
-                            <td>
-                                <p class="col3">Streaming/ <br> Abonnements</p>
-                            </td>
-                            <td>
-                                <p class="col4">Streaming /<br> publicité et vidéo</p>
-                            </td>
-                            <td>
-                                <p class="col5">Téléchargement</p>
-                            </td>
-                            <td>
-                                <p class="col6">Téléphone <br> mobile</p>
-                            </td>
-                            
+                            <td class="col1">Année</td>
+                            <td class="col2">Ventes physiques</td>
+                            <td class="col3">Streaming/Abonnements</td>
+                            <td class="col4">Streaming/publicité et vidéo</td>
+                            <td class="col5">Téléchargement</td>
+                            <td class="col6">Téléphone mobile</td>
                         </tr>
 
                         <tr class="donnees">
-                            <td>
-                                <p class="col1">2012</p>
-                            </td>
-                            <td>
-                                <p class="col2">74</p>
-                            </td>
-                            <td>
-                                <p class="col3">7</p>
-                            </td>
-                            <td>
-                                <p class="col4">3</p>
-                            </td>
-                            <td>
-                                <p class="col5">13</p>
-                            </td>
-                            <td>
-                                <p class="col6">2</p>
-                            </td>
+                            <td class="col1">2012</td>
+                            <td class="col2">74</td>
+                            <td class="col3">7</td>
+                            <td class="col4">3</td>
+                            <td class="col5">13</td>
+                            <td class="col6">2</td>
                         </tr>
 
                         <tr class="donnees">
-                            <td>
-                                <p class="col1">2017</p>
-                            </td>
-                            <td>
-                                <p class="col2">51</p>
-                            </td>
-                            <td>
-                                <p class="col3">35</p>
-                            </td>
-                            <td>
-                                <p class="col4">7</p>
-                            </td>
-                            <td>
-                                <p class="col5">6</p>
-                            </td>
-                            <td>
-                                <p class="col6">1</p>
-                            </td>
+                            <td class="col1">2017</td>
+                            <td class="col2">51</td>
+                            <td class="col3">35</td>
+                            <td class="col4">7</td>
+                            <td class="col5">6</td>
+                            <td class="col6">1</td>
                         </tr>
 
                         <tr class="donnees">
-                            <td>
-                                <p class="col1">2021</p>
-                            </td>
-                            <td>
-                                <p class="col2">31</p>
-                            </td>
-                            <td>
-                                <p class="col3">52</p>
-                            </td>
-                            <td>
-                                <p class="col4">15</p>
-                            </td>
-                            <td>
-                                <p class="col5">1</p>
-                            </td>
-                            <td>
-                                <p class="col6">1</p>
-                            </td>
+                            <td class="col1">2021</td>
+                            <td class="col2">31</td>
+                            <td class="col3">52</td>
+                            <td class="col4">15</td>
+                            <td class="col5">1</td>
+                            <td class="col6">1</td>
                         </tr>
                     </table>
                 </div>
+                <p class="source"><span class="bold">Source:</span> Syndicat national de l'édition phonographique/DEPS, Ministère de la Culture, 2022</p>
             </section>
 
 

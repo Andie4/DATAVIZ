@@ -8,8 +8,13 @@
       --color7: white;
   }
   
-  
-  
+  .bold{
+    font-weight: bold;
+}
+
+.invisible{
+    display: none;
+}
 
   /* ------ titre ------- */
   .revenusFrance h2{
@@ -27,6 +32,8 @@
   
   .revenusFrance .description{
       color: #fff;
+      margin-left: 20vh;
+
   }
   
   
@@ -39,7 +46,6 @@
       padding: 2.5vh;
       border-radius: 3vh;
       width: fit-content;
-      margin-left: 55vh;
   }
   
   
@@ -47,40 +53,39 @@
   
   /* ----- camembert ----- */
   .revenusFrance  .slider-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      margin-bottom: 6vh;
-  }
-  
-  .revenusFrance .cliker{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .revenusFrance svg{
-      width: 100px;
-      height: 100px;
-      
-  }
-  
-  .revenusFrance pie-chart.active {
-      display: block;
-      opacity: 1;
-  }
-  
-  .revenusFrance pie-chart{
-      width: 600px;
-      height: 600px;
-      position: relative;
-      position: relative;
-      display: none;
-      transition: opacity 0.5s ease-in-out;
-      
-  }
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 3vh;
+}
+
+.revenusFrance .cliker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revenusFrance svg{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.revenusFrance pie-chart.active {
+    display: block;
+    opacity: 1;
+}
+
+.revenusFrance pie-chart{
+    width: 600px;
+    height: 600px;
+    position: relative;
+    position: relative;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    
+}
   
   /* ----- flèches -----  */
   .revenusFrance button{
@@ -97,6 +102,21 @@
   }
   
   
+.diagramme{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.source{
+    color:var(--color6);
+    margin-bottom: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
   
   
   
@@ -165,9 +185,7 @@
   .revenusFrance .tableau{
       color: #fff;
       display: flex;
-      justify-content: center;
-      margin-bottom: 10vh;
-  
+      justify-content: center;  
   }
   
   .revenusFrance td{
