@@ -6,6 +6,7 @@
       --color5: #5F2992;
       --color6: #D9D9D9;
       --color7: white;
+      --color8: #1E072D;
   }
   
   .bold{
@@ -42,7 +43,7 @@
       color: white;
       margin-top: 20px;
       font-weight: bold;
-      background-color: var(--color3);
+      background-color: var(--color4);
       padding: 2.5vh;
       border-radius: 3vh;
       width: fit-content;
@@ -117,7 +118,17 @@
     align-items: center;
 }
 
-  
+.source1{
+
+    color:var(--color6);
+    position: relative;
+    bottom: 140px;
+   margin-left: 40px;
+
+   
+}
+
+
   
   
   
@@ -224,4 +235,13 @@
       width: 1050px;
   }
   
-  
+  /* graphique mondial  */
+  #chart-container {
+    position: relative; /* Utilisez 'fixed' si vous voulez que le graphique reste visible même en défilant. */
+    z-index: 9999; /* Place l'élément au-dessus des autres éléments de la page. */
+    pointer-events: none; /* Optionnel : empêche les interactions si nécessaire. */
+}
+
+#chart svg {
+    pointer-events: auto; /* Réactive les interactions pour les éléments à l'intérieur du graphique. */
+}

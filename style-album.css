@@ -80,8 +80,8 @@
 .nextYear img {
     width: 2vw;
     height: auto;
-    background-color: none;
     border: none;
+  
 }
 
 
@@ -91,6 +91,9 @@
 
 /* ========================================================== Podium ================================================================ */
 
+.top{
+    text-align: center;
+}
 
 .podium {
     display: flex;
