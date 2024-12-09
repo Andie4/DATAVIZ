@@ -492,9 +492,13 @@ footer a:hover{
 }
 
 /* css du tableau pour les revenus dans le monde */
-
+ 
 .accordion {
+<<<<<<< Updated upstream
   background-color: #A854B1;
+=======
+  background-color: #8c3aca;
+>>>>>>> Stashed changes
   color: white;
   cursor: pointer;
   padding: 10px 20px;
@@ -505,28 +509,21 @@ footer a:hover{
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
   margin-bottom: 10px;
-  display: inline-block;
   position: relative;
+<<<<<<< Updated upstream
   left: 1090px;
   bottom: 35vh;
+=======
+
+  
+  
+>>>>>>> Stashed changes
 }
 
 .accordion:hover {
   background-color: #642892;
 }
 
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: #370b4d;
-  padding: 0 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  margin: 0 auto;
-  width: 50%; /* Limite la largeur totale de la zone */
-}
 
 table {
   width: 100%;
@@ -534,7 +531,7 @@ table {
   font-size: 14px;
   margin-top: 15px;
   border-radius: 10px;
-  overflow: hidden; /* Nécessaire pour arrondir le tableau */
+  overflow: hidden; 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
