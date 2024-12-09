@@ -119,10 +119,20 @@ let yOffset = height;
                 `);
         })
         .on("mousemove", function(event) {
-            // Positionnement de l'info-bulle à gauche de la souris
-            tooltip.style("left", (event.pageX - tooltip.node().offsetWidth - 10) + "px")
-                .style("top", (event.pageY + 10) + "px");
+            // Récupération de l'année associée à la barre
+            const year = d.year;
+        
+            if (year <= 2003) {
+                // Positionnement à droite pour les années avant 2003
+                tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY + 10) + "px");
+            } else {
+                // Positionnement à gauche pour les années après 2003
+                tooltip.style("left", (event.pageX - tooltip.node().offsetWidth - 10) + "px")
+                    .style("top", (event.pageY + 10) + "px");
+            }
         })
+        
         
 
         .on("mouseout", function() {
