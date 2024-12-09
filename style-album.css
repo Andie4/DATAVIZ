@@ -13,13 +13,17 @@
 
 /* ============================================= GRAPHE ========================================================== */
 
-.BestSellingAlbumGraph {
+#BestSellingAlbum canvas {
     display: block;
-    width: 60vw;
-    height: 30vh;
-    margin: 20px auto;
+    max-width: 870px;
+    max-height: 400px;
+    margin: 0 3vw;
 }
 
+#tableContainerAlbum{
+    width: 60vw;
+    margin: 10vh auto;
+}
 
 /* ===================================================================================================================== */
 .divAlbum {
@@ -56,12 +60,12 @@
 .lien-album {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 1vw;
     margin-top: 20px;
 }
 
 .icon-lien-album img {
-    width: 60px;
+    width: 5vw;
     height: auto;
 }
 
