@@ -10,22 +10,42 @@
     --color9: #;
 }
 
-
-/* ============================================= GRAPHE ========================================================== */
-
-#BestSellingAlbum canvas {
-    display: block;
-    max-width: 870px;
-    max-height: 400px;
-    margin: 0 3vw;
+section{
+    margin: 15vh 0;
 }
 
-#tableContainerAlbum{
+/* ========================================= GRAPHE ========================================== */
+
+.AlbumMondeContent div canvas {
+    display: block;
+    max-width: 870px;
+    max-height: 550px;
+    /* margin: 0 3vw; */
+}
+
+.data-graph {
+    display: block;
+    width: 120px;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 1vh auto;
+}
+
+#tableContainerAlbum {
     width: 60vw;
     margin: 10vh auto;
 }
 
-/* ===================================================================================================================== */
+.AlbumMondeContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vw;
+
+}
+
+
+/* ============================================================================================== */
 .divAlbum {
     display: flex;
     flex-direction: column;
@@ -75,7 +95,7 @@
     display: flex;
     gap: 5vw;
     justify-content: center;
-    margin: 5vh 0 20vh 0;
+    margin: 5vh 0 5vh 0;
     font-size: 1.3rem;
 }
 
@@ -103,7 +123,7 @@
 
 
 
-/* ========================================================== Podium ================================================================ */
+/* ========================================== Podium ========================================== */
 
 
 .podium {

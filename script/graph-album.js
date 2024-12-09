@@ -52,7 +52,6 @@ fetch('data/mondialAlbum.json').then(function (response) {
                             color: '#FFFFFF', // Couleur des labels de l'axe X (blanc)
                             font: {
                                 size: 14, // Taille de la police des labels
-                                weight: 'bold' // Gras
                             }
                         },
 
@@ -71,7 +70,6 @@ fetch('data/mondialAlbum.json').then(function (response) {
                             color: '#FFFFFF', // Couleur des labels de l'axe Y (blanc)
                             font: {
                                 size: 14, // Taille de la police des labels
-                                weight: 'bold' // Gras
                             }
                         },
                         grid: {
@@ -155,6 +153,16 @@ fetch('data/mondialAlbum.json').then(function (response) {
 
 
 
+        const tabAlbum = document.querySelector("#tableContainerAlbum")
+        tabAlbum.style.display="none"
+
+        document.querySelector(".data-graph").addEventListener("click",function(){
+            if(tabAlbum.style.display=="none"){
+                tabAlbum.style.display="block"
+            }else{
+                tabAlbum.style.display="none"
+            }
+        })
 
 
 
