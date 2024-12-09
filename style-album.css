@@ -13,7 +13,12 @@
 
 /* ============================================= GRAPHE ========================================================== */
 
-
+.BestSellingAlbumGraph {
+    display: block;
+    width: 60vw;
+    height: 30vh;
+    margin: 20px auto;
+}
 
 
 /* ===================================================================================================================== */
@@ -117,7 +122,7 @@
     background-color: darkorchid;
 }
 
-.podium .top3  {
+.podium .top3 {
     background-color: palevioletred;
 }
 
@@ -147,17 +152,18 @@
 }
 
 
-.detail{
+.detail {
     height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
 }
-.detail p{
+
+.detail p {
     margin: 0;
 }
 
-.hide{
+.hide {
     display: none;
 }
