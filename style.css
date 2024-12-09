@@ -516,16 +516,22 @@ footer a:hover{
 }
 
 
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 table {
   width: 70%;
   border-collapse: collapse;
   font-size: 14px;
   margin-top: 15px;
   border-radius: 10px;
-  overflow: hidden; 
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-  position: relative;
-  left: 300px;
+  margin-left: 230px;
 }
 
 th, td {
@@ -552,6 +558,7 @@ td:hover {
 tr:nth-child(even) td {
   background-color: #290446;
 }
+
 
 h1 {
   color: #fffcfc;
