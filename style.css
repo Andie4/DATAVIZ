@@ -14,7 +14,7 @@
   --color5: #5F2992;
   --color6: #D9D9D9;
   --color7: white;
-  --color8: #;
+  --color8: #1E072D;
   --color9: #;
 }
 
@@ -89,6 +89,32 @@ header {
   z-index: 1;
 }
 
+/* Animation pour faire tourner le disque */
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Style du disque */
+.background-disc {
+  position: absolute;
+  top: 50%;
+  right: 65vw;
+  width: auto;
+  max-width: 1000px;
+  height: 100vh;
+  z-index: 1;
+
+  /* Animation */
+  animation: spin 15s linear infinite; /* 5s pour un tour complet */
+}
+
+
+
 /* ------------ Texte ----------------- */
 
 header {
@@ -124,7 +150,7 @@ header div p {
   display: inline-block;
   padding: 10px 20px;
   margin: 25px;
-  background-color: #ad45dd;
+  background-color: #A854B1 ;
   color: #ffffff;
   text-decoration: none;
   border-radius: 20px;
@@ -169,35 +195,34 @@ header div p {
 
 /* ------------ Frise Chrono ----------------- */
 /* Container de la frise */
-.timeline-container {
+/* Styles pour la frise */
+.timeline-wrapper .timeline-container {
   margin-bottom: 30vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; /* Espaces égaux entre les items */
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 20px;
   position: relative;
-  border-top: 2px solid #814caf; /* Ligne centrale */
+  border-top: 2px solid #814caf;
   box-sizing: border-box;
-
 }
 
-/* Éléments de la timeline */
-.timeline-item {
+.timeline-wrapper .timeline-item {
   text-align: center;
   position: relative;
-  flex: 1; /* Permet une répartition équitable */
+  flex: 1;
 }
 
-.year {
+.timeline-wrapper .year {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
 }
 
-.marker {
+.timeline-wrapper .marker {
   width: 16px;
   height: 16px;
   background-color: #814caf;
@@ -208,13 +233,13 @@ header div p {
   z-index: 2;
 }
 
-.description {
+.timeline-wrapper .description {
   font-size: 16px;
   color: #ffffff;
   margin-top: 10px;
 }
 
-.timeline-container::before {
+.timeline-wrapper .timeline-container::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -225,40 +250,29 @@ header div p {
   z-index: 1;
 }
 
-/* Responsive pour les écrans plus petits */
 @media (max-width: 768px) {
-  .timeline-container {
-    flex-direction: column; /* Passe en colonne */
-    height: auto; /* Ajuste automatiquement la hauteur */
-    border-top: none; /* Supprime la ligne centrale horizontale */
-    position: static; /* Remet la disposition par défaut pour éviter des conflits */
+  .timeline-wrapper .timeline-container {
+    flex-direction: column;
+    height: auto;
+    border-top: none;
+    position: static;
   }
 
-  .timeline-item {
-    flex: unset; /* Permet une largeur automatique */
-    margin-bottom: 20px; /* Ajoute un espacement entre les items */
+  .timeline-wrapper .timeline-item {
+    flex: unset;
+    margin-bottom: 20px;
   }
 
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: calc(50% - 1px);
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #814caf;
-    z-index: -1;
+  .timeline-wrapper .marker {
+    margin: 10px 0;
   }
 
-  .marker {
-    margin: 10px 0; /* Ajuste le placement des marqueurs */
-  }
-
-  .year,
-  .description {
-    text-align: center; /* Centrer le texte pour un affichage vertical */
+  .timeline-wrapper .year,
+  .timeline-wrapper .description {
+    text-align: center;
   }
 }
+
 
 /* Ajustements pour les très petits écrans (smartphones) */
 @media (max-width: 480px) {
@@ -472,7 +486,7 @@ h3 {
 
 
 footer{
-  background-color: var(--color3);
+  background-color: var(--color5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,7 +495,7 @@ footer{
 }
 
 footer a{
-  color: var(--color1);
+  color: var(--color7);
   text-decoration: none;
   transition: 1s ease-in-out;
 }
@@ -510,7 +524,7 @@ footer a:hover{
 /* css du tableau pour les revenus dans le monde */
 
 .accordion {
-  background-color: #b076dd;
+  background-color: #A854B1;
   color: white;
   cursor: pointer;
   padding: 10px 20px;
@@ -523,8 +537,8 @@ footer a:hover{
   margin-bottom: 10px;
   display: inline-block;
   position: relative;
-  left: 1150px;
-  bottom: 30vh;
+  left: 1090px;
+  bottom: 45vh;
 }
 
 .accordion:hover {
@@ -586,4 +600,23 @@ h1 {
   margin-bottom: 20px;
   font-size: 7rem;
   font-weight: 400;
+}
+
+/* Description */
+
+
+.description3{
+  
+  margin-left: 150px;
+  margin-top: 50px  ;
+  margin-bottom: 100px;
+ 
+
+}
+
+.description2 {
+ 
+  margin-left: 150px;
+  margin-top: -50px;
+  margin-top: -50px;
 }

@@ -44,12 +44,14 @@
   .text-container {
     width: 30%;
     max-width: 700px;
-    background-color: #ad45dd;
+    margin-right: 100px;
+    background-color: #A854B1;
     padding: 10px;
     color: white;
     font-size: 0.9rem;
     text-align: left;
     border-radius: 15px;
+    bottom: 350px;
   
   }
   

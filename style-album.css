@@ -114,8 +114,8 @@ section{
 .nextYear img {
     width: 2vw;
     height: auto;
-    background-color: none;
     border: none;
+  
 }
 
 
@@ -125,6 +125,9 @@ section{
 
 /* ========================================== Podium ========================================== */
 
+.top{
+    text-align: center;
+}
 
 .podium {
     display: flex;
@@ -146,8 +149,10 @@ section{
     background-color: darkorchid;
 }
 
+
 .podium .top3 {
     background-color: palevioletred;
+
 }
 
 /* Image podium */
