@@ -166,6 +166,28 @@ header div p {
 
 /* ============================================= FOOTER ============================================= */
 
+
+footer{
+  background-color: var(--color5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  height: 50px;
+}
+
+footer a{
+  color: var(--color7);
+  text-decoration: none;
+  transition: 1s ease-in-out;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  transition: 1s ease-in-out;
+}
+
+
 /* ==================================================== Histoire ======================================================== */
 
 /* ------------ Div ----------------- */
@@ -313,9 +335,6 @@ header div p {
 /* container qui regroupe les données du diagramme */
 
 
-
-
-
 .text-container {
   width: 30%;
   max-width: 700px;
@@ -331,164 +350,7 @@ header div p {
 }
 
 
-
-h2 {
-  font-family: "mister-grape";
-  font-size: 5rem;
-  font-weight: 400;
-  margin-left: 11%;
-
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  font-weight: 800;
-}
-
-
-
-
-
-/* ============================================= SECTION DONNÉES REVENUS EN FRANCE ============================================= */
-
-/* ------ titre ------- */
-.revenusFrance h2 {
-  font-size: 5rem;
-  font-family: 'mister-grape';
-  font-weight: lighter;
-  color: var(--color7);
-  margin-top: 0.5vh;
-  margin-bottom: 2vh;
-}
-
-
-.revenusFrance .description {
-  color: #fff;
-}
-
-
-.revenusFrance .date {
-  padding-right: 38vh;
-}
-
-
-
-
-/* ----- camembert ----- */
-.revenusFrance .slider-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.revenusFrance .cliker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.revenusFrance svg {
-  width: 100px;
-  height: 100px;
-
-}
-
-.revenusFrance pie-chart.active {
-  display: block;
-  opacity: 1;
-}
-
-.revenusFrance pie-chart {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  position: relative;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-
-}
-
-
-/* ----- flèches -----  */
-.revenusFrance button {
-  width: 8vh;
-  background-color: #1E072D;
-  border-radius: 20vh;
-  border: #b16cdf;
-  margin: 30px;
-
-}
-
-.revenusFrance img {
-  width: 50px;
-}
-
-
-
-
-
-/* ------- légendes ------- */
-.revenusFrance .legend {
-  margin-left: 50px;
-}
-
-.revenusFrance .col2 {
-  grid-column: 2 / 2;
-  grid-row: 1;
-  color: #fff;
-  grid-area: b;
-  align-self: center;
-}
-
-
-.revenusFrance .l1 {
-  background-color: var(--color2);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 100px 100px 100px 100px;
-}
-
-
-footer{
-  background-color: var(--color5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5vw;
-  height: 50px;
-}
-
-footer a{
-  color: var(--color7);
-  text-decoration: none;
-  transition: 1s ease-in-out;
-}
-
-footer a:hover{
-  text-decoration: underline;
-  transition: 1s ease-in-out;
-}
-
-
-/* ============================================= A11y ============================================= */
-
-.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}
+/* ==================================== TABLEAU =================================================== */
 
 /* css du tableau pour les revenus dans le monde */
  
@@ -558,14 +420,6 @@ tr:nth-child(even) td {
 }
 
 
-h1 {
-  color: #fffcfc;
-  font-family: "mister-grape";
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 7rem;
-  font-weight: 400;
-}
 
 /* Description */
 
@@ -584,4 +438,20 @@ h1 {
   margin-left: 150px;
   margin-top: -50px;
   margin-top: -50px;
+}
+
+
+/* ============================================= A11y ============================================= */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
