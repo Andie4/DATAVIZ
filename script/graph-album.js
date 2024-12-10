@@ -1,8 +1,72 @@
 "use strict"
 
 
+var index = 0;
+
 fetch('data/mondialAlbum.json').then(function (response) {
     response.json().then(function (dataVentes) {
+
+        function afficheAlbum(index) {
+            var album = dataVentes[index]
+            document.querySelector("#topAlbumMonde .year").innerHTML = album.year
+            document.querySelector('#topAlbumMonde .album').innerHTML = `
+            <div class="divAlbum">
+            <p class="TopTxt">${album.year}</p>
+            <img class="hide" src="${dataVentes[removeIndex(index)].imgAlbum}" alt="">
+            <img class="img-album" src="${album.imgAlbum}" alt="">
+            <img class="hide" src="${dataVentes[addIndex(index)].imgAlbum}" alt="">
+                <div class="detail">
+                    <p class="name-album">${album.album}</p>
+                    <p>${album.artist}</p>
+                </div>
+                <div class="lien-album">
+                    <a class="icon-lien-album" href="${album.URLDeezer}" alt="">
+                        <img src="img/logo_deezer.png" alt="lien vers l'album sur Deezer">
+                    </a>
+                    <a class="icon-lien-album" href="${album.URLSpotify}" alt="">
+                        <img src="img/logo_spotify.png" alt="lien vers l'album sur Spotify">
+                    </a>
+                    <a class="icon-lien-album" href="${album.URLYoutube}" alt="">
+                        <img src="img/logo_youtube.png" alt="lien vers l'album sur Youtube">
+                    </a>
+                </div>
+            </div>
+            `;
+
+        }
+
+        afficheAlbum(index);
+
+        var buttonPrev = document.querySelector("#topAlbumMonde .prevYear");
+        buttonPrev.addEventListener("click", function () {
+            afficheAlbum(removeIndex(index))
+            index = removeIndex(index)
+        });
+
+        var buttonNext = document.querySelector("#topAlbumMonde .nextYear");
+        buttonNext.addEventListener("click", function () {
+            afficheAlbum(addIndex(index))
+            index = addIndex(index)
+        });
+
+        function addIndex(index) {
+            if ((index + 1) < dataVentes.length) {
+                index++
+            } else {
+                index = 0
+            }
+            return index
+        }
+
+        function removeIndex(index) {
+            if ((index - 1) >= 0) {
+                index--
+            } else {
+                index = dataVentes.length - 1
+            }
+            return index
+        }
+        // ===============================================================
 
         const labels = dataVentes.map(item => item.year);
         const ventes = dataVentes.map(item => parseFloat(item.ventes));
@@ -24,6 +88,13 @@ fetch('data/mondialAlbum.json').then(function (response) {
                 }]
             },
             options: {
+                onClick: (event, elements) => {
+                    if (elements.length > 0) {
+                        const indexClicked = elements[0].index;
+                        index = indexClicked;
+                        afficheAlbum(index);
+                    }
+                },
                 responsive: true,
                 maintainAspectRatio: false, // S'adapte aux dimensions définies
                 plugins: {
@@ -90,7 +161,6 @@ fetch('data/mondialAlbum.json').then(function (response) {
         });
 
 
-
         // Tableau
 
         // Génération du tableau
@@ -145,15 +215,15 @@ fetch('data/mondialAlbum.json').then(function (response) {
 
 
         const tabAlbum = document.querySelector("#tableContainerAlbum")
-        tabAlbum.style.display="none"
+        tabAlbum.style.display = "none"
 
-        document.querySelector(".data-graph").addEventListener("click",function(){
-            if(tabAlbum.style.display=="none"){
-                tabAlbum.style.display="block"
-                document.querySelector(".data-graph").innerHTML="Cacher les données"
-            }else{
-                tabAlbum.style.display="none"
-                document.querySelector(".data-graph").innerHTML="Voir les données"
+        document.querySelector(".data-graph").addEventListener("click", function () {
+            if (tabAlbum.style.display == "none") {
+                tabAlbum.style.display = "block"
+                document.querySelector(".data-graph").innerHTML = "Cacher les données"
+            } else {
+                tabAlbum.style.display = "none"
+                document.querySelector(".data-graph").innerHTML = "Voir les données"
             }
         })
 
