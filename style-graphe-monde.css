@@ -68,42 +68,6 @@
 }
 
 
-table {
-  width: 70%;
-  border-collapse: collapse;
-  font-size: 14px;
-  margin-top: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-  
-}
-
-th, td {
-  padding: 8px;
-  text-align: center;
-}
-
-th {
-  background-color: #290446;
-  color: white;
-  border-bottom: 3px solid #370b4d;
-}
-
-td {
-  background-color: #370b4d;
-  border: 1px solid rgba(221, 221, 221, 0.1);
-  transition: background-color 0.3s;
-}
-
-td:hover {
-  background-color: #4b0d58;
-}
-
-tr:nth-child(even) td {
-  background-color: #290446;
-}
-
 
 
 /* Description */
