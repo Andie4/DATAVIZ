@@ -430,7 +430,6 @@ h3 {
 
 
 
-
 /* ------- légendes ------- */
 .revenusFrance .legend {
   margin-left: 50px;
@@ -516,12 +515,11 @@ footer a:hover{
 }
 
 
-.table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+.styled-table{
+
+  margin-left: 230px;
 }
+
 
 table {
   width: 70%;
