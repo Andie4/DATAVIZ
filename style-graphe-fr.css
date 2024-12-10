@@ -66,27 +66,6 @@
     align-items: center;
 }
 
-.revenusFrance svg{
-    width: 100px;
-    height: 100px;
-    
-}
-
-.revenusFrance pie-chart.active {
-    display: block;
-    opacity: 1;
-}
-
-.revenusFrance pie-chart{
-    width: 600px;
-    height: 600px;
-    position: relative;
-    position: relative;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-    
-}
-  
   /* ----- flèches -----  */
   .revenusFrance button{
       width: 8vh;

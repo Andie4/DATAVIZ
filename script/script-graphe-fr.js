@@ -1,190 +1,65 @@
-function strToDom(str){
-    return document.createRange().createContextualFragment(str).firstChild;
-}
+const dataByYear = [
+    { year: '2012', data: [74, 7, 3, 13, 2] },
+    { year: '2017', data: [51, 35, 7, 6, 1] },
+    { year: '2021', data: [31, 52, 15, 1, 1] }
+];
 
-class Point{
-    constructor(x, y){
-        this.x = x;
-        this.y = y;
-    }
-    toSvgPath (){
-        return `${this.x} ${this.y}`;
-    }
+let currentYearIndex = 0;
 
-    static fromAngle(angle){
-        return new Point(Math.cos(angle), Math.sin(angle));
-    }
-}   
+const ctx = document.getElementById('pie').getContext('2d');
 
-// /** 
-//   *  @property {number[]} data
-//   *  @property {SVGPathElement[]} paths
-// */
-
-class PieChart extends HTMLElement{
-    constructor(){
-        super();
-        const shadow = this.attachShadow({mode: 'open'});
-        const colors = ["#5F2992", "#D9D9D9", "#7C188D", "#A575D2", "#A854B1", "#000000", ];
-        this.data = this.getAttribute('data').split(';').map(v => parseFloat(v));
-        const svg = strToDom(`<svg viewBox="-1 -1 2 2">
-            <g mask="url(#graphMask)">
-
-            </g>
-
-            <mask  id="graphMask">
-                <rect fill="white" x="-1" y="-1" width="2" height="2"/>
-                <circle r="0.2" fill="black"/>   
-            </mask>
-        </svg>`);
-
-        const pathGroup = svg.querySelector('g');
-        const maskGroup = svg.querySelector('mask');
-
-        // création des chemins
-        this.paths = this.data.map((_, k) => {
-            const color = colors[k % colors.length];
-            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            path.setAttribute('fill', color);
-            pathGroup.appendChild(path);
-            return path;
-        });
-
-        this.lines = this.data.map((_, k) => {
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('stroke', 'black');
-            line.setAttribute('stroke-width', '0.02');
-            line.setAttribute('x1', '0');
-            line.setAttribute('y1', '0');
-            maskGroup.appendChild(line);
-            return line;
-        });
-    
-
-        shadow.appendChild(svg);
-    }
-
-    connectedCallback (){
-        const now = Date.now();
-        const duration = 1000;
-        const draw = () => {
-            const t = (Date.now() - now) / duration;
-            if (t < 1){
-                this.draw(t);
-                window.requestAnimationFrame(draw);
-            } else {
-                this.draw(1);
+const pieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Ventes physiques (1)', 'Streaming / Abonnements (2)', 'Streaming / Publicité et Vidéo (3)', 'Téléchargement (4)', 'Téléphone mobile (5)'],
+        datasets: [{
+            data: dataByYear[currentYearIndex].data,
+            backgroundColor: [
+                '#5F2992',
+                '#D9D9D9',
+                '#7C188D',
+                '#A575D2',
+                '#A854B1',
+            ],
+            hoverOffset: 5,
+            borderColor: 'transparent',
+            borderWidth: 2,
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false 
+            },
+            tooltip: {
+                callbacks: {
+                    label: ({ raw }) => `${raw} %`
+                }
             }
         }
-        window.requestAnimationFrame(draw);
     }
+});
 
-    draw (progress = 1){
-        const total = this.data.reduce((acc, v) => acc + v, 0);
-        let angle = 0;
-        let start = new Point(1, 0);
-        for (let k = 0; k < this.data.length; k++){
-            const ratio = (this.data[k] / total) * progress; 
-            angle +=  ratio* 2 * Math.PI;
-            const end = Point.fromAngle(angle);
-            const largeFlag = ratio > .5 ? '1' : '0';
-            this.paths[k].setAttribute('d', `M 0 0 L  ${start.toSvgPath()} A 1 1 0 ${largeFlag} 1 ${end.toSvgPath()} L 0 0`);
-            this.lines[k].setAttribute('x2', end.x);
-            this.lines[k].setAttribute('y2', end.y);
-            start = end;
-        }
-        
-    }
-}
+function updateChart() {
+    // remise à zéro des données
+    pieChart.data.datasets[0].data = dataByYear[currentYearIndex].data;
 
-customElements.define('pie-chart', PieChart);
+    // changement en fonction  de la date
+    const dateDisplay = document.getElementById('dateDisplay');
+    dateDisplay.textContent = dataByYear[currentYearIndex].year;
 
 
-
-
-// ----------------------slider --------------------
-let currentSlide = 0;
-
-const dates = ['2012','2017','2021'];
-
-function updateSlider() {
-    const slides = document.querySelectorAll('pie-chart');
-
-    // affiche la date associé
-    const dateDisplay = document.getElementById('dateDisplay'); 
-
-    slides.forEach((slide, index) => {
-        slide.classList.remove('active', 'fade-in'); 
-        if (index === currentSlide) {
-            slide.classList.add('active');
-
-            setTimeout(() => {
-                slide.classList.add('fade-in');
-            }, 18);  
-
-            dateDisplay.textContent = dates[index]; 
-        }
-    });
+    pieChart.update();
 }
 
 function prevSlide() {
-    const slides = document.querySelectorAll('pie-chart');
-    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-    updateSlider();
+    currentYearIndex = (currentYearIndex > 0) ? currentYearIndex - 1 : dataByYear.length - 1;
+    updateChart();
 }
 
 function nextSlide() {
-    const slides = document.querySelectorAll('pie-chart');
-    currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-    updateSlider();
+    currentYearIndex = (currentYearIndex < dataByYear.length - 1) ? currentYearIndex + 1 : 0;
+    updateChart();
 }
 
-updateSlider();
-
-
-
-// -----------------------------affichage des données ausurvol------------------------
-addEventListener('DOMContentLoaded', affichageDonnees);
-
-
-// design de l'infobulle
-const infoBulle = document.getElementById('infoBulle');
-infoBulle.style.position = 'absolute';
-infoBulle.style.backgroundColor = '#ad45dd';
-infoBulle.style.color = 'white';
-infoBulle.style.padding = '5px';
-infoBulle.style.borderRadius = '5px';
-infoBulle.style.display = 'none';
-document.body.appendChild(infoBulle);
-
-// affichage des données au survol
-function affichageDonnees() {
-    const camemberts = document.querySelectorAll('pie-chart');
-
-    camemberts.forEach(camembert => {
-        const parts = camembert.shadowRoot.querySelectorAll('path'); 
-         const donnees = camembert.getAttribute('data').split(';'); 
-         
-        //  au dessus phrase de chat gpt sinon les ; sont vus comme des données ils étaient affichés 
-
-        parts.forEach((part, index) => {
-            part.addEventListener('mouseover', (event) => {
-                infoBulle.textContent = `${donnees[index]} %`;
-                infoBulle.style.left = event.pageX + 10 + 'px';
-                infoBulle.style.top = event.pageY + 10 + 'px';
-
-            });
-
-            part.addEventListener('mousemove', (mouseEvent) => {
-                infoBulle.style.left = mouseEvent.pageX + 10 + 'px';
-                infoBulle.style.top = mouseEvent.pageY + 10 + 'px';
-                infoBulle.style.display = 'block';
-            });
-
-            part.addEventListener('mouseout', () => {
-                infoBulle.style.display = 'none';
-                
-            });
-        });
-    });
-}
+document.getElementById('dateDisplay').textContent = dataByYear[currentYearIndex].year;
