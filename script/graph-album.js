@@ -96,9 +96,7 @@ fetch('data/mondialAlbum.json').then(function (response) {
         // Génération du tableau
         const tableContainer = document.getElementById('tableContainerAlbum');
         const table = document.createElement('table');
-        table.setAttribute('border', '1');
         table.style.width = '100%';
-        table.style.borderCollapse = 'collapse';
 
         // En-tête du tableau
         const thead = document.createElement('thead');
@@ -107,9 +105,6 @@ fetch('data/mondialAlbum.json').then(function (response) {
         headers.forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
-            th.style.backgroundColor = '#A575D2';
-            th.style.color = 'white';
-            th.style.padding = '8px';
             headerRow.appendChild(th);
         });
         thead.appendChild(headerRow);
@@ -123,19 +118,15 @@ fetch('data/mondialAlbum.json').then(function (response) {
             // Colonnes
             const yearCell = document.createElement('td');
             yearCell.textContent = item.year;
-            yearCell.style.padding = '8px';
 
             const albumCell = document.createElement('td');
             albumCell.textContent = item.album;
-            albumCell.style.padding = '8px';
 
             const artistCell = document.createElement('td');
             artistCell.textContent = item.artist;
-            artistCell.style.padding = '8px';
 
             const salesCell = document.createElement('td');
             salesCell.textContent = item.ventes;
-            salesCell.style.padding = '8px';
 
             // Ajout des cellules à la ligne
             row.appendChild(yearCell);
@@ -159,8 +150,10 @@ fetch('data/mondialAlbum.json').then(function (response) {
         document.querySelector(".data-graph").addEventListener("click",function(){
             if(tabAlbum.style.display=="none"){
                 tabAlbum.style.display="block"
+                document.querySelector(".data-graph").innerHTML="Cacher les données"
             }else{
                 tabAlbum.style.display="none"
+                document.querySelector(".data-graph").innerHTML="Voir les données"
             }
         })
 
