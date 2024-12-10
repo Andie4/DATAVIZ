@@ -25,10 +25,21 @@ section{
 
 .data-graph {
     display: block;
-    width: 120px;
-    padding: 7px;
+    width: 200px;
     border-radius: 5px;
     margin: 1vh auto;
+    font-size: 1rem;
+    background-color: #8c3aca;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    bottom: 300px;
+}
+
+.data-graph:hover {
+    background-color: #642892;
+
 }
 
 #tableContainerAlbum {
@@ -151,7 +162,7 @@ section{
 
 
 .podium .top3 {
-    background-color: palevioletred;
+    background-color: #A854B1;
 
 }
 

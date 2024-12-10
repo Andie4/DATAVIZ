@@ -48,7 +48,7 @@
   padding: 10px 20px;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
@@ -85,7 +85,7 @@
 
 .description2 {
  
-  margin-left: 150px;
+  margin-left: 200px;
   margin-top: -50px;
   margin-top: -50px;
 }

@@ -43,7 +43,6 @@
       color: white;
       margin-top: 20px;
       font-weight: bold;
-      background-color: var(--color4);
       padding: 2.5vh;
       border-radius: 3vh;
       width: fit-content;
@@ -94,14 +93,18 @@
       background-color: #1E072D;
       border-radius: 20vh;
       border: #b16cdf;
-      margin: 30px;
+      margin: 0 10vh 0 10vh;
   
   }
   
   .revenusFrance img{
-      width: 50px;
+    width: 2vw;
   }
-  
+
+  .revenusFrance button:hover{
+    transform: scale(120%);
+
+  }  
   
 .diagramme{  
     display: flex;
