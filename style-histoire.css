@@ -1,65 +1,125 @@
+
 /* ==================================================== Histoire ======================================================== */
 
 /* ------------ Div ----------------- */
 #histoire{
-    margin-top: 10vh;
+  margin-top: 10vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
+
+/* ------------ Titre ----------------- */
+
+#histoire h2{
+  max-width: 400px ;
+}
+
+/* ------------ Texte ----------------- */
+
+#histoire .description{
+  margin-right: 50px ;
+  width: 70vw;
+  max-width: 600px;
+}
+
+/* ------------ Frise Chrono ----------------- */
+/* Container de la frise */
+/* Styles pour la frise */
+.timeline-wrapper .timeline-container {
+  margin-bottom: 30vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-top: 2px solid #814caf;
+  box-sizing: border-box;
+}
+
+.timeline-wrapper .timeline-item {
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+
+.timeline-wrapper .year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.timeline-wrapper .marker {
+  width: 16px;
+  height: 16px;
+  background-color: #814caf;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-wrapper .description {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.timeline-wrapper .timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #814caf;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-wrapper .timeline-container {
+    flex-direction: column;
+    height: auto;
+    border-top: none;
+    position: static;
   }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    gap: 3vw;
+
+  .timeline-wrapper .timeline-item {
+    flex: unset;
+    margin-bottom: 20px;
   }
-  
-  /* ------------ Titre ----------------- */
-  
-  #histoire h2{
-    max-width: 400px ;
+
+  .timeline-wrapper .marker {
+    margin: 10px 0;
   }
-  
-  /* ------------ Texte ----------------- */
-  
-  #histoire .description{
-    margin-right: 50px ;
-    width: 70vw;
-    max-width: 600px;
+
+  .timeline-wrapper .year,
+  .timeline-wrapper .description {
+    text-align: center;
   }
-  
-  /* ------------ Frise Chrono ----------------- */
-  
-  .chart-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px 0 0 0;
-    padding: 10px;
-    margin-right: 40%;
+}
+
+
+/* Ajustements pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .year {
+    font-size: 16px;
   }
-  
-  
-  .bar {
-    fill: #814caf;
-    transition: fill 0.3s;
+
+  .description {
+    font-size: 14px;
   }
-  
-  .bar:hover {
-    fill: #ad45dd;
+
+  .marker {
+    width: 12px;
+    height: 12px;
   }
-  
-  .axis text {
-    font-size: 12px;
-    fill: #333;
-  }
-  
-  .diagram-container {
-    display: flex;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px 0;
-  }
-  
-  .chart-container {
-    flex: 1;
-    padding: 10px;
-  }
-  
+}
+

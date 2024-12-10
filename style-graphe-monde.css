@@ -1,68 +1,126 @@
+
 /* ==================================================== Graphique Monde ======================================================== */
 
 
 .diagram {
-    flex: 1;
-  }
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+  align-items: center;
+}
+
+.diagram {
+  width: 50%;
+}
+
+/* container qui regroupe les données du diagramme */
+
+
+.text-container {
+  width: 30%;
+  max-width: 700px;
+  background-color: #650093;
+  padding: 10px;
+  color: white;
+  font-size: 0.9rem;
+  text-align: left;
+  border-radius: 15px;
+  position: relative;
+  bottom: 300px;
+
+}
+
+
+/* ==================================== TABLEAU =================================================== */
+
+/* css du tableau pour les revenus dans le monde */
+ 
+.accordion {
+
+  background-color: #8c3aca;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
+  margin-bottom: 10px;
+  position: relative;
+  left: 1050px;
+  bottom: 300px;
+}
+
+.accordion:hover {
+  background-color: #642892;
+}
+
+
+.styled-table{
+
+  margin-left: 230px;
+}
+
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   
-  /* .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 5vw;
-    align-items: center;
-  } */
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #290446;
+  color: white;
+  border-bottom: 3px solid #370b4d;
+}
+
+td {
+  background-color: #370b4d;
+  border: 1px solid rgba(221, 221, 221, 0.1);
+  transition: background-color 0.3s;
+}
+
+td:hover {
+  background-color: #4b0d58;
+}
+
+tr:nth-child(even) td {
+  background-color: #290446;
+}
+
+
+
+/* Description */
+
+
+.description3{
   
-  .diagram {
-    width: 50%;
-  }
-  
-  /* container qui regroupe les données du diagramme */
-  
-  .text-container {
-    background-color: #ad45dd;
-    color: white;
-    margin-right: 2vw;
-    text-align: left;
-  }
-  
-  /* style curseur */
-  #info-display {
-    position: absolute;
-    display: none;
-    background-color: #ad45dd;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    max-width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-    transition: all 0.1s ease;
-  }
-  
-  
-  .text-container {
-    width: 30%;
-    max-width: 700px;
-    margin-right: 100px;
-    background-color: #A854B1;
-    padding: 10px;
-    color: white;
-    font-size: 0.9rem;
-    text-align: left;
-    border-radius: 15px;
-    bottom: 350px;
-  
-  }
-  
-  .diagram-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px 0;
-  }
-  
-  
-  
+  margin-left: 150px;
+  margin-top: 50px  ;
+  margin-bottom: 100px;
+ 
+
+}
+
+.description2 {
+ 
+  margin-left: 150px;
+  margin-top: -50px;
+  margin-top: -50px;
+}
