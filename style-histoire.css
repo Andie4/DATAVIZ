@@ -29,6 +29,11 @@
 /* ------------ Frise Chrono ----------------- */
 /* Container de la frise */
 /* Styles pour la frise */
+.timeline{
+  width: 100%;
+  position: relative;
+}
+
 .timeline-wrapper .timeline-container {
   margin-bottom: 30vh;
   margin-top: 10vh;
