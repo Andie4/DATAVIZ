@@ -145,26 +145,25 @@ let yOffset = height;
 });
 
 // Frise chronologique (timeline)
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('resize', function () {
     const timeline = document.querySelector(".timeline");
     const timelineItems = document.querySelectorAll(".timeline-item");
-    const startYear = 1999; // Premier point de données
-    const endYear = 2022;  // Dernier point de données
+    const startYear = 1999;
+    const endYear = 2022;
     const yearsRange = endYear - startYear;
 
-    // Largeur totale de la frise
     const timelineWidth = timeline.offsetWidth;
-
-    // Calcul des pixels par année
     const pixelsPerYear = timelineWidth / yearsRange;
 
     timelineItems.forEach(item => {
         const year = parseInt(item.getAttribute("data-year"));
         const position = (year - startYear) * pixelsPerYear;
-        item.style.position = "absolute";
         item.style.left = `${position}px`;
     });
 });
+
+
+
 
 // Animation au chargement
 document.addEventListener('DOMContentLoaded', () => {

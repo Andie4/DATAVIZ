@@ -22,8 +22,8 @@ const pieChart = new Chart(ctx, {
                 '#A854B1',
             ],
             hoverOffset: 5,
-            borderColor: 'transparent',
-            borderWidth: 2,
+            borderColor: '#1E072D', // Espaces blancs entre les parties
+            borderWidth: 3, // Largeur des espaces
         }]
     },
     options: {
@@ -41,13 +41,12 @@ const pieChart = new Chart(ctx, {
 });
 
 function updateChart() {
-    // remise à zéro des données
+    // Remise à zéro des données
     pieChart.data.datasets[0].data = dataByYear[currentYearIndex].data;
 
-    // changement en fonction  de la date
+    // Changement en fonction de la date
     const dateDisplay = document.getElementById('dateDisplay');
     dateDisplay.textContent = dataByYear[currentYearIndex].year;
-
 
     pieChart.update();
 }
