@@ -52,6 +52,7 @@ section{
     justify-content: center;
     flex-direction: row;
     gap: 5vw;
+    flex-wrap: wrap;
 
 }
 
