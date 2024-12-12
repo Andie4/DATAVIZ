@@ -20,12 +20,13 @@
 
 
 /* ============================================= TYPOGRAPHIES ============================================= */
-/* todo : Mettre la police en WOFF et WOFF2 */
 
 @font-face {
   font-family: "mister-grape";
-  src: url(mister-grape.otf);
+  src: url(Typo/MisterGrapePersonalUse.woff2) format('woff2'),
+  url(Typo/MisterGrapePersonalUse.woff) format('woff');
 }
+
 
 /* =================================================== TITRE ======================================================= */
 
