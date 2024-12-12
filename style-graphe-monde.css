@@ -4,34 +4,87 @@
 
 .diagram {
   flex: 1;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  gap: 5vw;
-  align-items: center;
-}
-
-.diagram {
   width: 50%;
+
 }
 
 /* container qui regroupe les données du diagramme */
 
+@media screen and (min-width: 1500px) {
+  .text-container {
+    width: 30%;
+    max-width: 700px;
+    background-color: #650093;
+    padding: 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-align: left;
+    border-radius: 15px;
+    bottom: 300px;
+    margin-right: 90px;
+    margin-top: 10px;
+    position: relative;
+  }
+  .container {
+    display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+  align-items: center;
+  }
+  
+  .center-container {
+    display: flex;
+    
+  }
 
-.text-container {
-  width: 30%;
-  max-width: 700px;
-  background-color: #650093;
-  padding: 10px;
+  .accordion{
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+    margin: auto;  
+
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width: 1500px) {
+
+
+  .diagram {
+    width: 100%;
+  }
+
+  .text-container {
+    margin-top: 20px;
+    max-width: 700px;
+    background-color: #650093;
+    padding: 10px;
   color: white;
   font-size: 0.9rem;
   text-align: left;
   border-radius: 15px;
-  position: relative;
-  bottom: 300px;
-  margin-right: 90px;
+  margin: auto;  
+
+  }
+
+  .panel{
+    display: flex;
+  }
+
+  .center-container {
+    display: flex;
+    margin: 0; 
+   
+  }
+
+  .accordion{
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;    /* Centre verticalement */
+    margin: auto;  
+  }
 
 }
 
@@ -40,13 +93,7 @@
 
 /* css du tableau pour les revenus dans le monde */
 /* Conteneur centré */
-.center-container {
-  display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center;    /* Centre verticalement */
-  margin: 0;
- 
-}
+
 
 /* Style pour le bouton accordion */
 .accordion {
@@ -55,7 +102,6 @@
   cursor: pointer;
   padding: 10px 20px;
   border: none;
-  outline: none;
   font-size: 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
