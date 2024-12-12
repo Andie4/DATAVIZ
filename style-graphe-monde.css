@@ -39,9 +39,17 @@
 /* ==================================== TABLEAU =================================================== */
 
 /* css du tableau pour les revenus dans le monde */
+/* Conteneur centré */
+.center-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;    /* Centre verticalement */
+  margin: 0;
  
-.accordion {
+}
 
+/* Style pour le bouton accordion */
+.accordion {
   background-color: #8c3aca;
   color: white;
   cursor: pointer;
@@ -53,9 +61,6 @@
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(186, 49, 255, 0.1);
   margin-bottom: 10px;
-  position: relative;
-  left: 1050px;
-  bottom: 300px;
 }
 
 .accordion:hover {
