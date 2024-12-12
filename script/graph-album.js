@@ -1,6 +1,5 @@
 "use strict"
 
-
 var index = 0;
 
 fetch('data/mondialAlbum.json').then(function (response) {
@@ -38,16 +37,24 @@ fetch('data/mondialAlbum.json').then(function (response) {
         afficheAlbum(index);
 
         var buttonPrev = document.querySelector("#topAlbumMonde .prevYear");
+        var buttonNext = document.querySelector("#topAlbumMonde .nextYear");
+
         buttonPrev.addEventListener("click", function () {
-            afficheAlbum(removeIndex(index))
-            index = removeIndex(index)
+            index = removeIndex(index);
+            activeBarIndex = index; 
+            afficheAlbum(index);
+            updateBarColors(chart, activeBarIndex); 
+            chart.update(); 
         });
 
-        var buttonNext = document.querySelector("#topAlbumMonde .nextYear");
         buttonNext.addEventListener("click", function () {
-            afficheAlbum(addIndex(index))
-            index = addIndex(index)
+            index = addIndex(index); 
+            activeBarIndex = index; 
+            afficheAlbum(index); 
+            updateBarColors(chart, activeBarIndex); 
+            chart.update(); 
         });
+
 
         function addIndex(index) {
             if ((index + 1) < dataVentes.length) {
@@ -76,7 +83,15 @@ fetch('data/mondialAlbum.json').then(function (response) {
         const canvas = document.getElementById('BestSellingAlbumGraph');
         var ctx = canvas.getContext("2d");
 
-        new Chart(ctx, {
+        let activeBarIndex = null;
+
+        function updateBarColors(chart, activeIndex) {
+            chart.data.datasets[0].backgroundColor = chart.data.labels.map((_, index) =>
+                index === activeIndex ? '#5F2992' : '#A575D2'
+            );
+        }
+
+        const chart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -84,19 +99,21 @@ fetch('data/mondialAlbum.json').then(function (response) {
                     label: '# de ventes en millions',
                     data: ventes,
                     borderWidth: 1,
-                    backgroundColor: '#A575D2'
+                    backgroundColor: labels.map(() => '#A575D2') // Couleur par défaut
                 }]
             },
             options: {
                 onClick: (event, elements) => {
                     if (elements.length > 0) {
-                        const indexClicked = elements[0].index;
-                        index = indexClicked;
+                        activeBarIndex = elements[0].index;
+                        index = activeBarIndex;
                         afficheAlbum(index);
+                        updateBarColors(chart, activeBarIndex);
+                        chart.update();
                     }
                 },
                 responsive: true,
-                maintainAspectRatio: false, // S'adapte aux dimensions définies
+                maintainAspectRatio: false,
                 plugins: {
                     tooltip: {
                         callbacks: {
@@ -120,16 +137,15 @@ fetch('data/mondialAlbum.json').then(function (response) {
                 scales: {
                     x: {
                         ticks: {
-                            color: '#FFFFFF', // Couleur des labels de l'axe X (blanc)
+                            color: '#FFFFFF',
                             font: {
-                                size: 14, // Taille de la police des labels
+                                size: 14
                             }
                         },
-
                         title: {
                             display: true,
                             text: 'Années',
-                            color: '#FFFFFF', // Couleur du titre de l'axe X (blanc)
+                            color: '#FFFFFF',
                             font: {
                                 size: 16,
                                 weight: 'bold'
@@ -138,18 +154,18 @@ fetch('data/mondialAlbum.json').then(function (response) {
                     },
                     y: {
                         ticks: {
-                            color: '#FFFFFF', // Couleur des labels de l'axe Y (blanc)
+                            color: '#FFFFFF',
                             font: {
-                                size: 14, // Taille de la police des labels
+                                size: 14
                             }
                         },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.2)' // Couleur des lignes de la grille (translucide)
+                            color: 'rgba(255, 255, 255, 0.2)'
                         },
                         title: {
                             display: true,
                             text: 'Ventes (millions)',
-                            color: '#FFFFFF', // Couleur du titre de l'axe Y (blanc)
+                            color: '#FFFFFF',
                             font: {
                                 size: 16,
                                 weight: 'bold'
@@ -160,8 +176,14 @@ fetch('data/mondialAlbum.json').then(function (response) {
             }
         });
 
+        // Initialisation des couleurs
+        updateBarColors(chart, activeBarIndex);
+        chart.update();
 
-        // Tableau
+
+
+
+        // ================================================= Tableau ==================================================
 
         // Génération du tableau
         const tableContainer = document.getElementById('tableContainerAlbum');
