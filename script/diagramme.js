@@ -151,7 +151,6 @@ window.addEventListener('resize', function () {
     const startYear = 1999;
     const endYear = 2022;
     const yearsRange = endYear - startYear;
-
     const timelineWidth = timeline.offsetWidth;
     const pixelsPerYear = timelineWidth / yearsRange;
 
