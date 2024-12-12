@@ -36,7 +36,7 @@
             <p>Découvrez toutes vos données sur la musique : le site qui dévoile combien la musique rapporte, en
                 France et dans le monde. <br>Revenus, tendances, évolutions... Plongez dans les coulisses de
                 l’industrie musicale pour voir d’un autre œil votre passion.</p>
-            <a href="#histoire" class="btn-see-more" aria-label="Découvrez son évolution">Découvrir son évolution</a>
+            <a href="#histoire" class="btn-see-more">Découvrir son évolution</a>
         </div>
 
     </header>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- ------------------------------  Frise chronologique en pleine largeur  ----------------------------------------- -->
-        
+
         <div class="timeline-wrapper timeline">
             <div class="timeline-container">
                 <!-- Élément de la frise : Cassette -->
@@ -142,10 +142,9 @@
         </div>
         <p class="source1"><span class="bold">Source : </span> Statista : Chiffre d'affaires de l'industrie musicale
             entre 1999 et 2022. </p>
-            <div class="center-container">  
-        <button class="accordion"
-            aria-label="Afficher les données sur le chiffre d'affaires de l'industrie musicale">Afficher les
-            données</button>  </div>
+        <div class="center-container">
+            <button class="accordion">Afficher les données</button>
+        </div>
         <div class="panel">
             <table>
                 <caption><span class="invisible">Chiffre d'affaires de l'industrie musicale</span></caption>
@@ -155,15 +154,15 @@
                         <div class="table-container">
                             <table class="styled-table">
 
-                        <tr>
-                            <th>Année</th>
-                            <th>Chiffres d'affaires</th>
-                            <th>Ventes physiques</th>
-                            <th>Droits d'exécution</th>
-                            <th>Ventes digitales</th>
-                            <th>Streaming</th>
-                            <th>Droits de synchronisation</th>
-                        </tr>
+                                <tr>
+                                    <th>Année</th>
+                                    <th>Chiffres d'affaires</th>
+                                    <th>Ventes physiques</th>
+                                    <th>Droits d'exécution</th>
+                                    <th>Ventes digitales</th>
+                                    <th>Streaming</th>
+                                    <th>Droits de synchronisation</th>
+                                </tr>
 
                 </thead>
                 <tbody>
@@ -385,19 +384,19 @@
                     </tr>
                 </tbody>
             </table>
-        </table>
+            </table>
         </div>
         </div>
         </div>
 
-       
+
         <section id="BestSellingAlbum">
             <h2>L'Album le plus vendu chaque année</h2>
 
             <div class="AlbumMondeContent">
                 <div>
                     <canvas id="BestSellingAlbumGraph" width="870" height="550"></canvas>
-                    <p><strong>Source</strong> : Wikipédia, <span lang="en">List of best-selling albums</span>  </p>
+                    <p><strong>Source</strong> : Wikipédia, <span lang="en">List of best-selling albums</span> </p>
                 </div>
                 <div id="topAlbumMonde">
                     <div class="album"></div>
@@ -424,11 +423,13 @@
 
             <div class="slider-container">
                 <div class="clicker">
-                    <button class="fleche gauche" id="prev" onclick="prevSlide()"><img src="img/fleche_gauche.svg" alt="boutton année précédente"></button>
+                    <button class="fleche gauche" id="prev" onclick="prevSlide()"><img src="img/fleche_gauche.svg"
+                            alt="boutton année précédente"></button>
                 </div>
                 <h3 class="date" id="dateDisplay"></h3>
                 <div class="clicker">
-                    <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/fleche_droite.svg" alt="boutton année suivante"></button>
+                    <button id="next" class="fleche droite" onclick="nextSlide()"><img src="img/fleche_droite.svg"
+                            alt="boutton année suivante"></button>
                 </div>
             </div>
 
